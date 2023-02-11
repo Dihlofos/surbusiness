@@ -1,0 +1,29 @@
+.nav {
+
+  &__list {
+    list-style: none;
+    padding: 4rem 0 0 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  &__link {
+    display: block;
+    font-family: $dele;
+    font-size: 3.5rem;
+    line-height: 5.1rem;
+    text-decoration: none;
+    color: $black;
+    margin: 0 0 3.5rem;
+    transition: $tr;
+
+    &:hover {
+      color: $purple;
+    }
+
+  }
+
+}

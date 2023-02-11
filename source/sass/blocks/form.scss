@@ -1,0 +1,41 @@
+.form {
+
+  &__input {
+    width: 100%;
+
+    label {
+      display: block;
+      font-family: $dele;
+      text-transform: uppercase;
+      font-size: 1.8rem;
+      line-height: 2.6rem;
+      margin: 0 0 0.4rem
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 2px solid $black;
+      min-height: 7.3rem;
+      background-color: $grey;
+      margin: 0 0 1.8rem;
+      padding: 2.5rem 3.2rem;
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+      resize: none;
+    }
+
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+  }
+
+}

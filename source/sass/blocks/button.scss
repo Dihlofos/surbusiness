@@ -1,0 +1,74 @@
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $purple;
+    color: $white;
+    margin: 0;
+    border: 2px solid $purple;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    padding: 1.3rem 3rem;
+    font-weight: 400;
+    width: 100%;
+    cursor: pointer;
+    transition: $tr;
+    white-space: nowrap;
+
+    &:hover,
+    &:active {
+        background: $pink;
+        border-color: $pink;
+        color: white;
+    }
+
+
+    &--big{
+      font-size: 3rem;
+      line-height: 3.6rem;
+      padding: 2rem 6rem;
+    }
+
+    &--white {
+      background: $white;
+      border-color: $white;
+      color: $purple;
+
+      &:hover,
+      &:active {
+          background: $pink;
+          border-color: $pink;
+          color: $white;
+      }
+    }
+
+    &--transparent {
+      background: transparent;
+      border-color: $white;
+      color: $white;
+
+      &:hover,
+      &:active {
+          border-color: $pink;
+      }
+    }
+
+    &--transparent-purple {
+      background: transparent;
+      border-color: $purple;
+      color: $purple;
+
+      &:hover,
+      &:active {
+          border-color: $pink;
+          color: $pink;
+          background: transparent;
+      }
+    }
+
+    @media(max-width: $mobile) {
+        padding: 16px 40px;
+    }
+}
