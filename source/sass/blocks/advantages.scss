@@ -1,0 +1,38 @@
+.advantages {
+  padding: 5rem 0 8rem;
+
+  &__title {
+    margin: 0 0 6rem;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__block {
+    display: flex;
+    width: 50%;
+    height: 33.1rem;
+    background-color: $purple;
+    padding: 9rem 7.5rem;
+
+    p {
+      margin: 0;
+      max-width: 49rem;
+      text-transform: uppercase;
+      font-family: $dele;
+      font-size: 3rem;
+      line-height: 1.4;
+      color: $white;
+    }
+  }
+
+  &__battery {
+    position: absolute;
+    top: -17rem;
+    right: 0;
+  }
+
+}

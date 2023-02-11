@@ -10,6 +10,8 @@
   }
 
   &__content {
+    position: relative;
+    z-index: 2;
     max-width: 56rem;
     padding: 0.8rem 0 0;
   }
@@ -71,14 +73,65 @@
 
   &__star-icon {
     position: absolute;
+    z-index: 2;
+
+    &--top-right {
+      right: 15rem;
+      top: -2.9rem
+    }
+
+    &--top-left {
+      left: -3.9rem;
+      top: 4.1rem;
+    }
+
+    &--bottom-right {
+      right: 12.9rem;
+      bottom: 8.3rem;
+    }
+
+    &--content-top {
+      right: -11.3rem;
+      top: -9rem;
+    }
+
+    &--content-bottom {
+      right: -15.3rem;
+      top: 31.4rem;
+    }
   }
+
+
 
 
   &__button {
     width: 36.5rem;
     font-size: 2.5rem;
     line-height: 3rem;
+  }
 
+  &__image {
+    position: relative;
+    display: flex;
+    flex-grow:1;
+  }
+
+  &__image-superman {
+    position: relative;
+    z-index: 5;
+    margin: 0 0 0 2rem;
+  }
+
+  &__ornament {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 162.8rem;
+    height: 172.5rem;
+    max-width: initial;
+    top: -41rem;
+    right: -23rem;
+    z-index: 1;
   }
 
 }

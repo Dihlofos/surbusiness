@@ -1,0 +1,25 @@
+.section-title {
+  color: $black;
+
+  &__step {
+    font-size: 2rem;
+    line-height: 1;
+    margin: 0;
+  }
+
+  h2 {
+    font-family: $dele;
+    font-weight: 400;
+    font-size: 5.6rem;
+    line-height: 8.1rem;
+    text-transform: uppercase;
+    margin: 0;
+
+    span {
+      text-shadow: -1px 0 $black, 0 1px $black, 1px 0 $black, 0 -1px $black;
+      color: $grey;
+    }
+  }
+
+
+}

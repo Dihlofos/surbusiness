@@ -90,6 +90,13 @@
 
 "use strict";
 (function () {
+
+
+
+})();
+
+"use strict";
+(function () {
   // Modal open/close
   const modal = document.querySelector('.js-modal');
   const modalOpen = document.querySelectorAll('.js-modal-open');
