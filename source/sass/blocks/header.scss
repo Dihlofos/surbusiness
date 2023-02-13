@@ -1,4 +1,8 @@
 .header {
+  position: fixed;
+  width: 100%;
+  background-color: $grey;
+  z-index: 30;
 
   &__top {
     position: relative;

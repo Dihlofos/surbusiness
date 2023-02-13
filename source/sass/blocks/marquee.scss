@@ -1,17 +1,24 @@
 .marquee {
+  position: relative;
   border-top: 1px solid $purple;
   border-bottom: 1px solid $purple;
   text-transform: uppercase;
   color: $purple;
   font-size: 5.6rem;
   line-height: 6.87rem;
+  height: 13rem;
 
   &__wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+  }
+
+  &__marquee {
+    position: relative;
     display: flex;
-    flex-wrap: nowrap;
-    overflow: auto;
     align-items: center;
-    padding: 2rem 1rem;
 
     &::-webkit-scrollbar {
       -webkit-appearance: none;
@@ -22,8 +29,20 @@
   }
 
   p {
+    position: relative;
     white-space: nowrap;
     margin: 0;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      position: relative;
+      top: 2rem;
+      width: 7.9rem;
+      height: 9rem;
+      background: url('/img/icons/icon-lightning.svg');
+      margin: 0 3.4rem 0 2.6rem;
+    }
   }
 
   svg {

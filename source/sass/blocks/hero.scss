@@ -1,8 +1,14 @@
 .hero {
-  padding: 18rem 0 22.7rem;
-  max-width: 138.7rem;
-  margin: 0 auto;
-  border-bottom: 1px solid $black;
+
+
+  &__wrapper {
+    border-bottom: 1px solid $black;
+  }
+  &__content {
+    padding: 18rem 0 22.7rem;
+    max-width: 132.7rem;
+    margin: 0 auto;
+  }
 
   &__top {
     display: flex;
