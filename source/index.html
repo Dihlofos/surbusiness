@@ -266,9 +266,21 @@
           <div class="container about__container">
             <div class="about__wrapper">
               <div class="about__image">
-                <img class="about__star-icon about__star-icon--top-left" width="40" height="32" src="img/icon-star.png" alt="">
-                <img class="about__star-icon about__star-icon--top-right" width="40" height="32" src="img/icon-star.png" alt="">
-                <img class="about__star-icon about__star-icon--bottom-right" width="40" height="32" src="img/icon-star.png" alt="">
+                <picture>
+                  <source srcset="img/icon-star.webp" type="image/webp">
+                  <source srcset="img/icon-star.png" type="image/png">
+                  <img class="about__star-icon about__star-icon--top-left" width="40" height="32" src="img/icon-star.png" alt="">
+                </picture>
+                <picture>
+                  <source srcset="img/icon-star.webp" type="image/webp">
+                  <source srcset="img/icon-star.png" type="image/png">
+                  <img class="about__star-icon about__star-icon--top-right" width="40" height="32" src="img/icon-star.png" alt="">
+                </picture>
+                <picture>
+                  <source srcset="img/icon-star.webp" type="image/webp">
+                  <source srcset="img/icon-star.png" type="image/png">
+                  <img class="about__star-icon about__star-icon--bottom-right" width="40" height="32" src="img/icon-star.png" alt="">
+                </picture>
                 <picture class="about__image-superman">
                   <source srcset="img/superman.webp" type="image/webp">
                   <source srcset="img/superman.png" type="image/png">
@@ -276,14 +288,22 @@
                 </picture>
                 <picture class="about__ornament">
                   <source srcset="img/superman-ornament.webp" type="image/webp">
-                  <source srcset="img/superman-ornament" type="image/png">
+                  <source srcset="img/superman-ornament.png" type="image/png">
                   <img class="about__image-superman-ornament" width="1628" height="1725" src="img/superman-ornament.png" alt="">
                 </picture>
 
               </div>
               <div class="about__content">
-                <img class="about__star-icon about__star-icon--content-top" width="40" height="32" src="img/icon-star.png" alt="">
-                <img class="about__star-icon about__star-icon--content-bottom" width="40" height="32" src="img/icon-star.png" alt="">
+                <picture>
+                  <source srcset="img/icon-star.webp" type="image/webp">
+                  <source srcset="img/icon-star.png" type="image/png">
+                  <img class="about__star-icon about__star-icon--content-top" width="40" height="32" src="img/icon-star.png" alt="">
+                </picture>
+                <picture>
+                  <source srcset="img/icon-star.webp" type="image/webp">
+                  <source srcset="img/icon-star.png" type="image/png">
+                  <img class="about__star-icon about__star-icon--content-bottom" width="40" height="32" src="img/icon-star.png" alt="">
+                </picture>
                 <h5 class="about__title">
                   Давно и&nbsp;упорно работаете, но&nbsp;доходы не&nbsp;растут, а&nbsp;конкуренты по-прежнему на&nbsp;шаг впереди? Или только выходите на&nbsp;рынок и&nbsp;боитесь прогореть и&nbsp;остаться с&nbsp;долгами?
                 </h5>
@@ -381,7 +401,7 @@
           <div class="container">
             <div class="receive__content">
               <div class="receive__arrow-block">
-                <div class="receive__arrow-text">По итогу вы получаете</div>
+                <div class="receive__arrow-text">По итогу вы<br> получаете:</div>
                 <svg class="receive__arrow" width="253" height="291" viewBox="0 0 253 291" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M239.601 193.574C216.951 198.964 188.536 197.514 165.623 195.336C134.642 192.391 105.357 180.162 79.2602 163.385C51.4175 145.486 34.2083 119.018 18.9981 90.6033" stroke="white" stroke-width="2" stroke-linecap="round"/>
                   <path d="M239.183 195.045C237.05 190.718 230.673 177.965 224.614 178.795" stroke="white" stroke-width="2" stroke-linecap="round"/>
@@ -391,15 +411,218 @@
               <div class="receive__main">
                 <div class="receive__header">
                   <h5 class="receive__title">
-                    1. Пошаговую концепцию
+                    1. Пошаговую<br> концепцию
                   </h5>
                   <h5 class="receive__title">
-                    2. Понимание, как с ней работать
+                    2. Понимание, как<br> с ней работать
                   </h5>
                 </div>
+                <div class="receive__description">
+                  Мы&nbsp;не&nbsp;присылаем аналитический документ на&nbsp;сотни страниц. Даем&nbsp;то, с&nbsp;чем можно начинать работать уже сейчас.
+                </div>
+                <div class="receive__buttons">
+                  <button class="receive__button button button--big button--white js-modal-open-step-1">Оставить заявку</button>
+                  <a href="#" class="receive__button button button--big button--transparent">Заполнить анкету</a>
+                </div>
               </div>
+              <picture class="receive__stars">
+                <source srcset="img/icon-three-stars.webp" type="image/webp">
+                <source srcset="img/icon-three-stars.png" type="image/png">
+                <img width="88" height="112" src="img/icon-three-stars.png" alt="three-stars">
+              </picture>
             </div>
           </div>
+        </section>
+        <section class="steps" id="steps">
+          <div class="container steps__container">
+            <div class="steps__title section-title">
+              <p class="section-title__step">03/</p>
+              <h2><span>Вау! Хочется подробностей,</span><br>
+                что именно вы будете делать?</span>
+              </h2>
+            </div>
+            <picture>
+              <source srcset="img/fish-ornament.webp" type="image/webp">
+              <source srcset="img/fish-ornament.png" type="image/png">
+              <img class="steps__ornament" width="1607" height="1570" src="img/fish-ornament.png" alt="">
+            </picture>
+            <picture>
+              <source srcset="img/fish.webp" type="image/webp">
+              <source srcset="img/fish.png" type="image/png">
+              <img class="steps__fish" width="569" height="456" src="img/fish-ornament.png" alt="">
+            </picture>
+
+            <ui class="steps__list">
+              <li class="steps__item">
+                <div class="steps__label">Шаг 1</div>
+                <div class="steps__wrapper">
+                  <h5 class="steps__step-title">Анализ</h5>
+                  <div class="steps__content">
+                    <p>Перед тем, как приступить к действиям, разбираемся, что у вас есть сейчас и как это влияет на заработок.</p>
+                    <ul>
+                      <li>
+                        <svg width="10" height="9" role="img" aria-label="bullit">
+                          <use xlink:href="img/sprite.svg#icon-bullit"></use>
+                        </svg>
+                        Локация (если работаете в офлайн)
+                      </li>
+                      <li>
+                        <svg width="10" height="9" role="img" aria-label="bullit">
+                          <use xlink:href="img/sprite.svg#icon-bullit"></use>
+                        </svg>
+                        Позиционирование
+                      </li>
+                      <li>
+                        <svg width="10" height="9" role="img" aria-label="bullit">
+                          <use xlink:href="img/sprite.svg#icon-bullit"></use>
+                        </svg>
+                        Фирменный стиль
+                      </li>
+                      <li>
+                        <svg width="10" height="9" role="img" aria-label="bullit">
+                          <use xlink:href="img/sprite.svg#icon-bullit"></use>
+                        </svg>
+                        Конкуренты
+                      </li>
+                      <li>
+                        <svg width="10" height="9" role="img" aria-label="bullit">
+                          <use xlink:href="img/sprite.svg#icon-bullit"></use>
+                        </svg>
+                        Сайт
+                      </li>
+                      <li>
+                        <svg width="10" height="9" role="img" aria-label="bullit">
+                          <use xlink:href="img/sprite.svg#icon-bullit"></use>
+                        </svg>
+                        Соцсети
+                      </li>
+                      <li>
+                        <svg width="10" height="9" role="img" aria-label="bullit">
+                          <use xlink:href="img/sprite.svg#icon-bullit"></use>
+                        </svg>
+                        Отзывы
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="steps__item">
+                <div class="steps__label">Шаг 2</div>
+                <div class="steps__wrapper">
+                  <h5 class="steps__step-title">концепция</h5>
+                  <div class="steps__content">
+                    <p>Открываем второе дыхание бизнеса. Вы&nbsp;увидите себя с&nbsp;новой стороны&nbsp;&mdash; это могут быть как кардинальные изменения, так и&nbsp;точечные. Концепция обозначит ваше место на&nbsp;рынке, привлечет внимание новых клиентов и&nbsp;будущих инвесторов.</p>
+                    <ul>
+                      <li>
+                        <svg width="10" height="9" role="img" aria-label="bullit">
+                          <use xlink:href="img/sprite.svg#icon-bullit"></use>
+                        </svg>
+                        Big idea (главная идея и&nbsp;фундамент вашего бизнеса)
+                      </li>
+                      <li>
+                        <svg width="10" height="9" role="img" aria-label="bullit">
+                          <use xlink:href="img/sprite.svg#icon-bullit"></use>
+                        </svg>
+                        Новое название (если требуется)
+                      </li>
+                      <li>
+                        <svg width="10" height="9" role="img" aria-label="bullit">
+                          <use xlink:href="img/sprite.svg#icon-bullit"></use>
+                        </svg>
+                        Слоганы
+                      </li>
+                      <li>
+                        <svg width="10" height="9" role="img" aria-label="bullit">
+                          <use xlink:href="img/sprite.svg#icon-bullit"></use>
+                        </svg>
+                        Креативные рамки (форматы, в&nbsp;которых открываются смыслы концепции)
+                      </li>
+                      <li>
+                        <svg width="10" height="9" role="img" aria-label="bullit">
+                          <use xlink:href="img/sprite.svg#icon-bullit"></use>
+                        </svg>
+                        TOV (язык, на&nbsp;котором бизнес говорит с&nbsp;клиентами)
+                      </li>
+                      <li>
+                        <svg width="10" height="9" role="img" aria-label="bullit">
+                          <use xlink:href="img/sprite.svg#icon-bullit"></use>
+                        </svg>
+                        Key visual (3&nbsp;варианта нового ключевого рекламного стиля)
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="steps__item">
+                <div class="steps__label">Шаг 3</div>
+                <div class="steps__wrapper">
+                  <h5 class="steps__step-title">инструменты</h5>
+                  <div class="steps__content">
+                    <p>Вы&nbsp;уже понимаете, что нужно подтянуть, а&nbsp;что уже работает на&nbsp;вас&nbsp;&mdash; в&nbsp;концепции полностью отражены внутренние ценности компании, существующий культурный код и&nbsp;конкурентоспособность в&nbsp;обществе. Осталось продумать медиаплан под комфортный бюджет. Показываем каждый инструмент, прописываем задачи и&nbsp;ставим kpi.</p>
+                    <p>Блоки, которые могут быть в&nbsp;вашем индивидуальном медиаплане:</p>
+                    <ul>
+                      <li>
+                        <svg width="10" height="9" role="img" aria-label="bullit">
+                          <use xlink:href="img/sprite.svg#icon-bullit"></use>
+                        </svg>
+                        Digital-реклама (таргет, программатик,<br> медийная и&nbsp;контекстная реклама)
+                      </li>
+                      <li>
+                        <svg width="10" height="9" role="img" aria-label="bullit">
+                          <use xlink:href="img/sprite.svg#icon-bullit"></use>
+                        </svg>
+                        Работа со&nbsp;СМИ
+                      </li>
+                      <li>
+                        <svg width="10" height="9" role="img" aria-label="bullit">
+                          <use xlink:href="img/sprite.svg#icon-bullit"></use>
+                        </svg>
+                        Интеграции у&nbsp;блогеров
+                      </li>
+                      <li>
+                        <svg width="10" height="9" role="img" aria-label="bullit">
+                          <use xlink:href="img/sprite.svg#icon-bullit"></use>
+                        </svg>
+                        Паблики в&nbsp;социальных сетях
+                      </li>
+                      <li>
+                        <svg width="10" height="9" role="img" aria-label="bullit">
+                          <use xlink:href="img/sprite.svg#icon-bullit"></use>
+                        </svg>
+                        PR-акции (офлайн и&nbsp;онлайн)
+                      </li>
+                      <li>
+                        <svg width="10" height="9" role="img" aria-label="bullit">
+                          <use xlink:href="img/sprite.svg#icon-bullit"></use>
+                        </svg>
+                        Фото и видео
+                      </li>
+                      <li>
+                        <svg width="10" height="9" role="img" aria-label="bullit">
+                          <use xlink:href="img/sprite.svg#icon-bullit"></use>
+                        </svg>
+                        Мерч и подарки
+                      </li>
+                      <li>
+                        <svg width="10" height="9" role="img" aria-label="bullit">
+                          <use xlink:href="img/sprite.svg#icon-bullit"></use>
+                        </svg>
+                        Сайты, приложения, боты
+                      </li>
+                      <li>
+                        <svg width="10" height="9" role="img" aria-label="bullit">
+                          <use xlink:href="img/sprite.svg#icon-bullit"></use>
+                        </svg>
+                        Специальные проекты
+                      </li>
+
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ui>
+          </div>
+
         </section>
 
       </main>

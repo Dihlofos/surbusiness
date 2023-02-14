@@ -1,0 +1,128 @@
+.steps {
+  padding: 10rem 0 10rem;
+
+  &__container {
+    position: relative;
+  }
+
+  &__title {
+    margin: 0 0 6rem;
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+
+
+  &__content {
+    max-width: 52.3rem;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    padding: 0.5rem 0 0;
+
+    .steps__item:nth-child(2) & {
+      max-width: 56.3rem;
+    }
+
+    .steps__item:nth-child(3) & {
+      max-width: 64.6rem;
+    }
+
+
+    p {
+      font-weight: 500;
+      margin: 0 0 2rem;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      position: relative;
+      svg {
+        position: absolute;
+        left: -2rem;
+        top: 0.5rem;
+      }
+
+
+
+    }
+
+  }
+
+  &__ornament {
+    position: absolute;
+    top: -27rem;
+    right: -57rem;
+    z-index: 1;
+  }
+
+  &__fish {
+    position: absolute;
+    top: 20rem;
+    right: -1.8rem;
+    z-index: 3;
+  }
+
+  &__list {
+    display: block;
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 3;
+    max-width: 113.5rem;
+    z-index: 2;
+  }
+
+  &__item {
+    position: relative;
+    border: 2px solid $purple;
+    border-radius: 50px 50px 0px 0px;
+    background-color: $grey;
+    padding: 8rem 4.7rem 14rem;
+
+    &:nth-child(2) {
+      margin: -4rem 0 0;
+    }
+
+    &:last-child {
+      margin: -8.4rem 0 0;
+    }
+
+  }
+
+
+  &__label {
+    position: absolute;
+    top: -4.6rem;
+    left: 3.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 1rem;
+    color: $white;
+    width: 8.9rem;
+    height: 8.9rem;
+    border-radius: 50%;
+    background-color: $purple;
+  }
+
+  &__step-title {
+    margin: 0;
+    font-weight: 400;
+    font-family: $dele;
+    font-size: 3rem;
+    line-height: 4.3rem;
+    text-transform: uppercase;
+    width: 33.6rem;
+  }
+
+}

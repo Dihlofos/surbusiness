@@ -148,6 +148,7 @@
   // Modal open/close
   const modal = document.querySelector('.js-modal');
   const modalOpen = document.querySelectorAll('.js-modal-open');
+  const modalOpenStep1 = document.querySelector('.js-modal-open-step-1');
   const modalClose = document.querySelectorAll('.js-modal-close');
   const toStepOneButton = document.querySelector('.js-step-go-1');
 
@@ -165,28 +166,21 @@
     reserveScrollBarGap: true,
   };
 
+  modalOpenStep1.addEventListener('click', ()=> {
+    showStep(1);
+    openModal();
+  })
+
   // Event Listeners
   modalOpen.forEach((openButton)=>{
     openButton.addEventListener('click', ()=> {
-      modal.style.display = 'flex'
-      setTimeout(()=>{
-        modal.classList.add('is-open');
-
-        disableBodyScroll(modal, options);
-      },0)
+      openModal();
     })
   })
 
-
-
   modalClose.forEach((button) => {
     button.addEventListener('click', () => {
-      modal.classList.remove('is-open');
-      setTimeout(()=>{
-        modal.style.display = 'none'
-        clearSteps();
-        enableBodyScroll(modal);
-      },200)
+      closeModal();
     })
 
   })
@@ -198,9 +192,25 @@
    // Actions
   initForm();
 
-
-
   // Functions
+
+  function openModal() {
+    modal.style.display = 'flex'
+      setTimeout(()=>{
+        modal.classList.add('is-open');
+
+        disableBodyScroll(modal, options);
+      },0)
+  }
+
+  function closeModal() {
+    modal.classList.remove('is-open');
+      setTimeout(()=>{
+        modal.style.display = 'none'
+        clearSteps();
+        enableBodyScroll(modal);
+      },200)
+  }
   function clearSteps() {
     steps.forEach((step,index)=> {
       if (index === 0) {
