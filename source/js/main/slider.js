@@ -2,7 +2,7 @@
 (function () {
   new Swiper(".js-slider", {
     // Optional parameters
-    loop: false,
+    loop: true,
     slidesPerView: 'auto',
     speed: 1000,
     pagination: {
@@ -25,7 +25,7 @@
 
       1025: {
         slidesPerView: 'auto',
-        spaceBetween: 40,
+        spaceBetween: 20,
       },
     },
   });

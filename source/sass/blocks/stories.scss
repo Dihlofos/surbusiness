@@ -1,0 +1,90 @@
+.stories {
+  padding: 10rem 0 10rem;
+
+  &__title {
+    margin: 0 0 3rem;
+  }
+
+  &__description {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    margin: 0 0 1rem;
+    max-width: 49.8rem;
+  }
+
+  &__slide {
+    background-color: $white;
+    border: 2px solid $purple;
+    padding: 6rem 4.2rem 9.5rem 8.3rem;
+    height: 49rem;
+    width: 75rem;
+
+  }
+
+  &__slide-title {
+    display: inline-flex;
+    position: relative;
+    font-family: $dele;
+    font-weight: 400;
+    font-size: 3.5rem;
+    line-height: 5.1rem;
+    text-transform: uppercase;
+    color: $purple;
+    margin: 0 0 1.6rem;
+  }
+
+  &__title-image {
+    position: absolute;
+    top: -1rem;
+      right: -13rem;
+
+
+    &--dots {
+      top: -1.4rem;
+      right: -12.3rem;
+    }
+
+    &--circle {
+      top: 0.7rem;
+      right: -14rem;
+    }
+
+    &--stars {
+      top: -2rem;
+      right: 2rem;
+    }
+
+    &--check {
+      top: 0.5rem;
+      right: -10.5rem;
+    }
+
+    &--two-stars {
+      top: -1rem;
+      right: -19rem;
+    }
+  }
+
+  &__slide-text {
+    max-width: 44rem;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+
+  .swiper-wrapper {
+    padding: 0 3.2rem;
+  }
+
+  &__nav {
+    position: relative;
+    top: 27.7rem;
+    left: 0;
+    padding: 0 2rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 3;
+  }
+
+
+}
