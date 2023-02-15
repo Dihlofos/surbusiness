@@ -1,13 +1,13 @@
 "use strict";
 (function () {
-  new Swiper(".js-slider", {
+  new Swiper(".js-slider-team", {
     // Optional parameters
-    loop: true,
+    loop: false,
     slidesPerView: 'auto',
     speed: 1000,
     navigation: {
-      nextEl: ".swiper__next",
-      prevEl: ".swiper__prev",
+      nextEl: ".swiper__next-team",
+      prevEl: ".swiper__prev-team",
     },
     breakpoints: {
       320: {

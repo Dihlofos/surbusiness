@@ -1,0 +1,80 @@
+.team {
+  padding: 10rem 0 10rem;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0 0 3.5rem;
+
+  }
+
+  &__arrow {
+    &--prev {
+      transform: rotate(180deg) translateY(0.8rem);
+    }
+
+  }
+
+  &__description {
+    max-width: 55.8rem;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    margin: 0 0 6rem;
+
+    a {
+      display: inline-block;
+      padding-bottom: 0.1rem;
+      border-bottom: 1px solid $purple;
+
+      &:hover {
+        border-color: $pink;
+      }
+    }
+  }
+
+  .swiper-nav {
+    display: flex;
+    align-items: center;
+    gap: 2.2rem;
+    margin: 0 0 1.4rem;
+  }
+
+  &__slide {
+    width: 36.5rem;
+
+    &:last-child {
+      width: 3rem;
+    }
+  }
+
+  .swiper-wrapper {
+    padding: 0 3.2rem;
+  }
+
+  &__photo {
+    margin: 0 0 0.5rem;
+  }
+
+  &__name {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    text-transform: uppercase;
+    margin: 0 0 0.5rem;
+  }
+
+  &__position {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    opacity: 0.6;
+    margin: 0 0 0.5rem;
+  }
+
+  &__about {
+    border-top: 1px solid $black;
+    padding: 0.5rem 0 0;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+
+}

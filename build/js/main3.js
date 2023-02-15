@@ -344,9 +344,6 @@
     loop: true,
     slidesPerView: 'auto',
     speed: 1000,
-    pagination: {
-      el: ".swiper-pagination",
-    },
     navigation: {
       nextEl: ".swiper__next",
       prevEl: ".swiper__prev",
@@ -369,23 +366,6 @@
     },
   });
 
-  if (isTouchDevice()) {
-    const slides = document.querySelectorAll('.js-slider .swiper-slide');
-    slides.forEach((slide)=>{
-      slide.addEventListener('click', ()=>{
-        slide.classList.toggle('hover');
-      })
-    })
-
-} else {
-    return;
-}
-
-function isTouchDevice() {
-    return (('ontouchstart' in window) ||
-        (navigator.maxTouchPoints > 0) ||
-        (navigator.msMaxTouchPoints > 0));
-}
 
 
 })();
@@ -397,6 +377,39 @@ function isTouchDevice() {
     speedAsDuration: true,
     easing: "easeOutQuad",
   });
+})();
+
+"use strict";
+(function () {
+  new Swiper(".js-slider-team", {
+    // Optional parameters
+    loop: false,
+    slidesPerView: 'auto',
+    speed: 1000,
+    navigation: {
+      nextEl: ".swiper__next-team",
+      prevEl: ".swiper__prev-team",
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+      },
+
+      768: {
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+      },
+
+      1025: {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+      },
+    },
+  });
+
+
+
 })();
 
 (function () {
