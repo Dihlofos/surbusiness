@@ -1,0 +1,65 @@
+.anketa {
+  padding: 10rem 0 10rem;
+
+  &__content {
+    position: relative;
+    padding: 7.7rem 4rem 4.6rem 4.6rem;
+    background-color: $purple;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 5;
+  }
+
+  &__arrow {
+    position: absolute;
+    fill: $white;
+    top: 1rem;
+    left: -10.7rem
+  }
+
+  &__spiral {
+    position: absolute;
+    right: -5.5rem;
+    bottom: -4.4rem;
+  }
+
+  &__circle-word {
+    position: relative;
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: -1.7rem;
+    }
+  }
+
+  &__title {
+    position: relative;
+    font-family: $dele;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 5rem;
+    line-height: 7.2rem;
+    text-align: center;
+    margin: 0 0 3.2rem;
+  }
+
+  &__transparent-text {
+    text-shadow: -1px 0 $white, 0 1px $white, 1px 0 $white, 0 -1px $white;
+    color: $purple;
+  }
+
+  &__button {
+    width: 44.3rem;
+    margin: 0 0 2rem;
+    padding: 1.2rem 0 1.2rem;
+  }
+
+  &__description {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+}

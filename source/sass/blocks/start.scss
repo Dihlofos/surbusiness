@@ -1,0 +1,76 @@
+.start {
+  padding: 10rem 0 10rem;
+
+
+
+  &__title {
+    margin: 0 0 8rem;
+  }
+
+  &__blocks {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__block {
+    position: relative;
+    width: 25%;
+    border-left: 2px solid $purple;
+    padding: 0 3rem 0 2rem;
+    z-index: 4;
+    width: 25.3%;
+
+    &:last-child{
+      width: 23.5%;
+    }
+
+    &--image {
+      padding: 5rem 0 2.7rem;
+      border-left: none;
+      z-index: 2;
+      width: 25.4%;
+
+    }
+  }
+
+  &__digit {
+    display: block;
+    font-family: $dele;
+    font-weight: 400;
+    font-size: 8.2rem;
+    line-height: 7.9rem;
+    margin: 0 0 4.5rem;
+  }
+
+  &__block-title {
+    font-weight: 400;
+    font-family: $dele;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    margin: 0 0 1rem;
+    text-transform: uppercase;
+  }
+
+  &__block-text {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    margin: 0;
+  }
+
+  &__image {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__ornament {
+    position: absolute;
+    top: -33rem;
+    right: -23rem;
+    width: 105.6rem;
+    height: 101.7rem;
+    z-index: 1;
+  }
+
+}
