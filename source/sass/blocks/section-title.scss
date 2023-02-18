@@ -5,6 +5,11 @@
     font-size: 2rem;
     line-height: 1;
     margin: 0;
+
+    @media (max-width:$mobile) {
+      font-size: 13px;
+      margin: 0 0 7px;
+    }
   }
 
   h2 {
@@ -14,6 +19,11 @@
     line-height: 8.1rem;
     text-transform: uppercase;
     margin: 0;
+
+    @media (max-width:$mobile) {
+      font-size: 20px;
+      line-height: 29px;
+    }
 
     span {
       text-shadow: -1px 0 $black, 0 1px $black, 1px 0 $black, 0 -1px $black;

@@ -104,6 +104,7 @@
                 >
               </li>
             </ul>
+            <button class="header__modal-trigger header__modal-trigger--mobile button js-modal-open">Заказать услуги</button>
           </nav>
         </div>
       </header>
@@ -198,7 +199,7 @@
                   </div>
                 </div>
                 <footer class="modal__step-footer">
-                  А&nbsp;пока предлагаем заглянуть на&nbsp;<a href="https://suragency.ru">сайт SUR Agency</a>,<br> чтобы познакомиться с&nbsp;агентством поближе.
+                  А&nbsp;пока предлагаем заглянуть на&nbsp;<a href="https://suragency.ru">сайт SUR Agency</a>,&nbsp;<br> чтобы познакомиться с&nbsp;агентством поближе.
                 </footer>
               </article>
               <article class="modal__step js-step visually-hidden" data-step="4">
@@ -229,7 +230,7 @@
             <div class="hero__wrapper">
               <div class="hero__content">
                 <div class="hero__top">
-                  <img class="heto__top-logo" width="773" height="126" src="img/logo-sur-dlya.svg" alt="">
+                  <img class="hero__top-logo" width="773" height="126" src="img/logo-sur-dlya.svg" alt="">
                   <div class="hero__animaicons animaicons">
                     <svg width="105" height="105" role="img" aria-label="close">
                       <use xlink:href="img/sprite.svg#icon-pink-some"></use>
@@ -241,20 +242,32 @@
                       <use xlink:href="img/sprite.svg#icon-check"></use>
                     </svg>
                   </div>
+                  <div class="hero__mobile-icons">
+                    <svg width="82" height="105" role="img" aria-label="close">
+                      <use xlink:href="img/sprite.svg#icon-check"></use>
+                    </svg>
+                    <svg width="82" height="105" role="img" aria-label="close">
+                      <use xlink:href="img/sprite.svg#icon-purple-think"></use>
+                    </svg>
+                  </div>
+
                 </div>
                 <div class="hero__bottom">
                   <p class="hero__text">
-                    всегда на вашей<br> стороне
+                    всегда на вашей<br>&nbsp;стороне
+                    <svg class="hero__arrow"  width="67" height="51" role="img" aria-label="close">
+                      <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                    </svg>
                   </p>
-                  <svg class="hero__arrow"  width="67" height="51" role="img" aria-label="close">
-                    <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
-                  </svg>
+
                   <div class="hero__bottom-logo">
-                    <img width="866" height="105" src="img/logo-busnesa.svg" alt="">
-                    <svg width="858" height="167" viewBox="0 0 858 167" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="hero__bottom-mobile-svg" width="105" height="105" role="img" aria-label="close">
+                      <use xlink:href="img/sprite.svg#icon-pink-some"></use>
+                    </svg>
+                    <img class="hero__bottom-text" width="866" height="105" src="img/logo-busnesa.svg" alt="">
+                    <svg class="hero__bottom-circle" width="858" height="167" viewBox="0 0 858 167" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M249.169 2C200.33 4.2375 148.308 8.33676 101.304 22.855C70.1614 32.4744 41.1195 54.5996 20.584 79.8972C5.19751 98.8518 -10.0031 119.892 16.2495 136.362C49.7005 157.349 94.2673 160.577 132.382 162.493C231.172 167.46 330.951 164.563 429.583 158.042C521.593 151.958 613.782 143.138 704.866 128.449C750.083 121.157 802.696 114.902 843.571 92.0145C862.998 81.1359 855.987 69.4029 847.169 53.6017C843.53 47.0815 840.316 39.5092 834.084 34.9724C815.336 21.3249 784.602 19.6816 762.769 17.8267C705.387 12.9516 647.053 16.9045 589.551 16.8376C522.194 16.7592 454.868 14.3968 387.546 12.3863" stroke="#8469FF" stroke-width="3" stroke-linecap="round"/>
                     </svg>
-
                   </div>
 
                 </div>
@@ -341,10 +354,16 @@
                 <img width="303" height="243" src="img/battery.png" alt="superman">
               </picture>
               <div class="service__block">
-                <p>Концепцию<br>с&nbsp;подробным планом<br>для вашего бизнеса.</p>
+                <p>Концепцию<br> с&nbsp;подробным планом<br>для вашего бизнеса.</p>
               </div>
               <div class="service__block">
                 <p>2&nbsp;консультации<br> в&nbsp;удобном формате &mdash;&mdash;<br>офлайн или онлайн.</p>
+              </div>
+              <div class="service__block service__block--mobile service__block--mobile-first">
+                <p>Концепцию с&nbsp;подробным<br>планом для вашего бизнеса.</p>
+              </div>
+              <div class="service__block service__block--mobile">
+                <p>2&nbsp;консультации в&nbsp;удобном формате&nbsp;&mdash;&mdash; офлайн или онлайн.</p>
               </div>
             </div>
           </div>
@@ -360,7 +379,7 @@
         </section>
 
         <section class="advantages" id="advantages">
-          <div class="container">
+          <div class="advantages__container container">
             <div class="advantages__title section-title">
               <p class="section-title__step">02/</p>
               <h2>Почему всего?<br>
@@ -374,19 +393,19 @@
                   <p>Сколько вы уже вложили в свое дело и продолжаете тратить? Уверены, что намного больше. Поэтому мы разработали продукт, который будет по карману практически любому бизнесу, и поможет в короткие сроки «отбить» эти вложения.</p>
                 </div>
               </li>
-              <li class="advantages__block">
+              <li class="advantages__block advantages__block--team">
                 <div class="advantages__block-content">
                   <h5>Командная<br> работа <img class="advantages__icon-dots" src="img/icon-dots.png" width="59" height="39" alt=""></h5>
                   <p>Над каждой концепцией работает целая команда из пиарщиков, маркетологов, стратегов, дизайнеров. Это намного выгоднее, чем нанимать каждого специалиста по отдельности.</p>
                 </div>
               </li>
-              <li class="advantages__block">
+              <li class="advantages__block advantages__block--vision">
                 <div class="advantages__block-content">
                   <h5>Видение<br> со стороны<img class="advantages__icon-heart"  src="img/icon-heart.png" width="28" height="52" alt=""></h5>
                   <p>Над каждой концепцией работает целая команда из пиарщиков, маркетологов, стратегов, дизайнеров. Это намного выгоднее, чем нанимать каждого специалиста по отдельности.</p>
                 </div>
               </li>
-              <li class="advantages__block">
+              <li class="advantages__block advantages__block--individual">
                 <div class="advantages__block-content">
                   <h5>Индивидуальная<br> сборка<img class="advantages__icon-circle" src="img/icon-circle.png" width="53" height="47" alt=""></h5>
                   <p>У нас нет шаблонов, как у большинства экспертов продаж, продакшн-бутиков и упаковщиков брендов. Всё собираем индивидуально после того, как изучаем ваш бизнес, продукт и конкурентов.</p>
@@ -401,7 +420,7 @@
           <div class="container">
             <div class="receive__content">
               <div class="receive__arrow-block">
-                <div class="receive__arrow-text">По итогу вы<br> получаете:</div>
+                <div class="receive__arrow-text">По итогу вы&nbsp;<br> получаете:</div>
                 <svg class="receive__arrow" width="253" height="291" viewBox="0 0 253 291" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M239.601 193.574C216.951 198.964 188.536 197.514 165.623 195.336C134.642 192.391 105.357 180.162 79.2602 163.385C51.4175 145.486 34.2083 119.018 18.9981 90.6033" stroke="white" stroke-width="2" stroke-linecap="round"/>
                   <path d="M239.183 195.045C237.05 190.718 230.673 177.965 224.614 178.795" stroke="white" stroke-width="2" stroke-linecap="round"/>
@@ -411,10 +430,10 @@
               <div class="receive__main">
                 <div class="receive__header">
                   <h5 class="receive__title">
-                    1. Пошаговую<br> концепцию
+                    <span>1.</span> Пошаговую<br> концепцию
                   </h5>
                   <h5 class="receive__title">
-                    2. Понимание, как<br> с ней работать
+                    <span>2.</span> Понимание, как<br> с ней работать
                   </h5>
                 </div>
                 <div class="receive__description">
@@ -453,7 +472,7 @@
             </picture>
 
             <ui class="steps__list">
-              <li class="steps__item">
+              <li class="steps__item js-step">
                 <div class="steps__label">Шаг 1</div>
                 <div class="steps__wrapper">
                   <h5 class="steps__step-title">Анализ</h5>
@@ -506,7 +525,7 @@
                   </div>
                 </div>
               </li>
-              <li class="steps__item">
+              <li class="steps__item js-step">
                 <div class="steps__label">Шаг 2</div>
                 <div class="steps__wrapper">
                   <h5 class="steps__step-title">концепция</h5>
@@ -553,7 +572,7 @@
                   </div>
                 </div>
               </li>
-              <li class="steps__item">
+              <li class="steps__item is-open js-step">
                 <div class="steps__label">Шаг 3</div>
                 <div class="steps__wrapper">
                   <h5 class="steps__step-title">инструменты</h5>

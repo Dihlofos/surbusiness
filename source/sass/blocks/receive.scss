@@ -2,10 +2,25 @@
   padding: 10rem 0 10rem;
   color: $white;
 
+  @media (max-width: $mobile) {
+    padding: 40px 0;
+  }
+
+  .container {
+    @media (max-width: $mobile) {
+      padding: 0;
+    }
+  }
+
   &__content {
     padding: 7rem 9.6rem 6.9rem 4.7rem;
     display: flex;
     background-color: $purple;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      padding: 40px 20px 50px;
+    }
   }
 
   &__arrow-text {
@@ -16,6 +31,15 @@
     line-height: 3rem;
     margin: 0 0 3rem;
     z-index: 2;
+
+    @media (max-width: $mobile) {
+      font-size: 16px;
+      line-height: 19px;
+
+      br {
+        display: none;
+      }
+    }
   }
 
   &__arrow {
@@ -23,6 +47,15 @@
     top: 3.5rem;
     left: 2rem;
     z-index: 0;
+
+    @media (max-width: $mobile) {
+      transform: scaleY(-1) rotate(213deg);
+      width: 109px;
+      height: 109px;
+      top: 0;
+      left: auto;
+      right: -61px;
+    }
   }
 
   &__arrow-block {
@@ -36,6 +69,13 @@
     line-height: 3rem;
     font-weight: 600;
     width: 36.5rem;
+
+    @media (max-width: $mobile) {
+      width: 100%;
+      font-size: 16px;
+      line-height: 19px;
+      height: 47px;
+    }
   }
 
   &__description {
@@ -43,6 +83,12 @@
     font-size: 1.8rem;
     line-height: 2.2rem;
     margin: 0 0 5rem;
+
+    @media (max-width: $mobile) {
+      font-size: 14px;
+      line-height: 17px;
+      margin: 0 0 40px;
+    }
   }
 
   &__stars {
@@ -50,11 +96,20 @@
     position: relative;
     top: -5rem;
     right: -11rem;
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
   }
 
   &__header {
     display: flex;
     margin: 0 0 2.7rem;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      margin: 0 0 10px;
+    }
   }
 
   &__title {
@@ -69,11 +124,26 @@
     &:first-child {
       width: 38.5rem;
     }
+
+    @media (max-width: $mobile) {
+      font-size: 23px;
+      line-height: 33px;
+      margin: 0 0 20px;
+
+      span {
+        display: block;
+      }
+    }
   }
 
   &__buttons {
     display: flex;
     gap: 2rem;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: 20px;
+    }
   }
 
 }

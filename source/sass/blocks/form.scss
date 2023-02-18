@@ -9,7 +9,13 @@
       text-transform: uppercase;
       font-size: 1.8rem;
       line-height: 2.6rem;
-      margin: 0 0 0.4rem
+      margin: 0 0 0.4rem;
+
+      @media(max-width: $mobile) {
+        font-size: 16px;
+        line-height: 23px;
+        margin: 0 0 4px;
+      }
     }
 
     input,
@@ -23,6 +29,18 @@
       font-size: 1.8rem;
       line-height: 2.2rem;
       resize: none;
+
+      @media(max-width: $mobile) {
+        min-height: 41px;
+        padding: 11px 13px;
+        font-size: 14px;
+        line-height: 17px;
+        margin: 0 0 14px;
+      }
+    }
+
+    textarea {
+      min-height: 156px;
     }
 
     /* Chrome, Safari, Edge, Opera */

@@ -4,4 +4,8 @@
   justify-content: space-between;
   padding: 0 7rem 0 6.2rem;
 
+  @media (max-width: $mobile) {
+    display: none;
+  }
+
 }

@@ -8,6 +8,13 @@
   line-height: 6.87rem;
   height: 13rem;
 
+  @media (max-width: $mobile) {
+    font-size: 25px;
+    line-height: 30px;
+    height: 61px;
+    margin: 40px 0 0;
+  }
+
   &__wrapper {
     position: absolute;
     bottom: 0;
@@ -42,6 +49,14 @@
       height: 9rem;
       background: url('../img/icons/icon-lightning.svg');
       margin: 0 3.4rem 0 2.6rem;
+
+      @media (max-width: $mobile) {
+        width: 45px;
+        height: 40px;
+        margin: 0 8px 0 10px;
+        top: 5px;
+        background-size: cover;
+      }
     }
   }
 

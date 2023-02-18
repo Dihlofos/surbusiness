@@ -1,16 +1,36 @@
 .steps {
   padding: 10rem 0 10rem;
 
+  @media (max-width: $mobile) {
+    padding: 30px 0 20px;
+  }
+
   &__container {
     position: relative;
   }
 
   &__title {
     margin: 0 0 6rem;
+
+    @media (max-width: $mobile) {
+      padding: 0 100px 0 0;
+      margin: 0 0 42px;
+    }
   }
 
   &__wrapper {
     display: flex;
+    transition: $tr;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      max-height: 30px;
+      overflow: hidden;
+
+      .steps__item.is-open & {
+        max-height: 900px;
+      }
+    }
   }
 
 
@@ -32,6 +52,12 @@
     p {
       font-weight: 500;
       margin: 0 0 2rem;
+
+      @media (max-width: $mobile) {
+        font-size: 14px;
+        line-height: 17px;
+        margin: 0 0 28px;
+      }
     }
 
     ul {
@@ -42,16 +68,21 @@
 
     li {
       position: relative;
+
+      @media (max-width: $mobile) {
+        padding: 0 0 0 20px;
+      }
       svg {
         position: absolute;
         left: -2rem;
         top: 0.5rem;
+
+        @media (max-width: $mobile) {
+          left: 0;
+          top: 2px;
+        }
       }
-
-
-
     }
-
   }
 
   &__ornament {
@@ -66,6 +97,13 @@
     top: 20rem;
     right: -1.8rem;
     z-index: 3;
+
+    @media (max-width: $mobile) {
+      width: 190px;
+      height: 152px;
+      right: -60px;
+      top: 0;
+    }
   }
 
   &__list {
@@ -77,6 +115,10 @@
     z-index: 3;
     max-width: 113.5rem;
     z-index: 2;
+
+    @media (max-width: $mobile) {
+      max-width: initial;
+    }
   }
 
   &__item {
@@ -93,6 +135,20 @@
     &:last-child {
       margin: -8.4rem 0 0;
       padding: 8rem 4.7rem 7.7rem;
+    }
+
+    @media (max-width: $mobile) {
+      border-radius: 22px 22px 0 0;
+      padding: 24px 20px 30px 25px;
+
+      &:nth-child(2) {
+        margin: -20px 0 0;
+      }
+
+      &:last-child {
+        margin: -20px 0 0;
+        padding: 24px 20px 30px 25px;
+      }
     }
 
   }
@@ -113,6 +169,16 @@
     height: 8.9rem;
     border-radius: 50%;
     background-color: $purple;
+
+    @media (max-width: $mobile) {
+      width: 46px;
+      height: 46px;
+      font-size: 11px;
+      line-height: 1;
+      left: auto;
+      top: -20px;
+      right: 30px;
+    }
   }
 
   &__step-title {
@@ -123,6 +189,13 @@
     line-height: 4.3rem;
     text-transform: uppercase;
     width: 33.6rem;
+
+    @media (max-width: $mobile) {
+      width: auto;
+      font-size: 16px;
+      line-height: 23px;
+      margin: 0 0 21px;
+    }
   }
 
 }

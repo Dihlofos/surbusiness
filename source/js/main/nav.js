@@ -35,7 +35,7 @@
       }, timeout);
     } else {
 
-      nav.style.display = 'block'
+      nav.style.display = 'flex'
       disableBodyScroll(nav, options);
 
       setTimeout(()=>{

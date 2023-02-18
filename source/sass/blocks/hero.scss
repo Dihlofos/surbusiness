@@ -3,33 +3,40 @@
 
   &__wrapper {
     border-bottom: 1px solid $black;
+
+    @media (max-width: $mobile) {
+      border-bottom: none;
+    }
   }
+
   &__content {
     padding: 18rem 0 22.7rem;
     max-width: 132.7rem;
     margin: 0 auto;
+
+    @media (max-width: $mobile) {
+      padding: 28px 0 0;
+    }
   }
 
   &__top {
     display: flex;
     align-items: flex-start;
     margin: 0 0 3.5rem;
+
+    @media (max-width: $mobile) {
+      gap: 10px;
+    }
   }
 
   &__bottom {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
 
-  &__animaicons {
-    flex-grow: 1;
-  }
-
-  &__text {
-    font-size: 3.5rem;
-    line-height: 4.2rem;
-    color: $black;
+    @media (max-width: $mobile) {
+      flex-direction: column-reverse;
+    }
   }
 
   &__bottom-logo {
@@ -40,14 +47,102 @@
       bottom: -4.5rem;
       left: -4.5rem;
     }
+
+    @media (max-width: $mobile) {
+      display: flex;
+      gap: 13px;
+
+      svg {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 15%;
+        height: auto;
+      }
+    }
+  }
+
+  &__bottom-circle {
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__bottom-text {
+    @media (max-width: $mobile) {
+      width: 85%;
+    }
+  }
+
+  &__bottom-mobile-svg {
+    display: none;
+    width: 38px;
+    height: 38px;
+
+    @media (max-width: $mobile) {
+      display: flex;
+    }
+  }
+
+  &__animaicons {
+    flex-grow: 1;
+  }
+
+  &__mobile-icons {
+    display: none;
+    align-items: center;
+    width: 20%;
+    gap: 10px;
+
+    svg {
+      height: 100%;
+    }
+
+    @media (max-width:$mobile) {
+      display: flex;
+    }
   }
 
   &__text {
+    font-size: 3.5rem;
+    line-height: 4.2rem;
+    color: $black;
     margin: 0 0 1rem;
+    display: flex;
+    flex-grow: 1;
+    gap: 4rem;
+    align-items: center;
+
+    @media (max-width: $mobile) {
+      width: 100%;
+      font-size: 20px;
+      line-height: 24px;
+      gap: 12px;
+
+      br {
+        display: none;
+      }
+    }
   }
+
+  &__top-logo {
+    @media (max-width: $mobile) {
+      width: 75%;
+    }
+  }
+
+
+
+
 
   &__arrow {
     margin: 0 3.5rem 0 0;
+
+    @media (max-width: $mobile) {
+      width: 38px;
+      transform: rotate(180deg);
+      margin: 0;
+    }
   }
 
 }
