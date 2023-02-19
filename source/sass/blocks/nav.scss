@@ -2,9 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid $black;
 
-
+  @media (max-width: $mobile) {
+    border: 1px solid $black;
+  }
 
   &__list {
     list-style: none;

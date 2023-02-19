@@ -1,10 +1,23 @@
 .start {
   padding: 10rem 0 10rem;
 
+  @media (max-width: $mobile) {
+    padding: 50px 0 20px;
+
+    .container {
+      padding: 0;
+    }
+  }
+
 
 
   &__title {
     margin: 0 0 8rem;
+
+    @media (max-width: $mobile) {
+      margin: 0 0 14px;
+      padding: 0 20px;
+    }
   }
 
   &__blocks {
@@ -12,6 +25,19 @@
     list-style: none;
     padding: 0;
     margin: 0;
+
+    @media (max-width: $mobile) {
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      padding: 0 20px;
+
+      &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 0;
+        height: 0;
+        display: none;
+      }
+    }
   }
 
   &__block {
@@ -22,15 +48,42 @@
     z-index: 4;
     width: 25.3%;
 
+
+
     &:last-child{
       width: 23.5%;
+    }
+
+    @media (max-width: $mobile) {
+      width: 310px;
+      flex-shrink: 0;
+      padding: 0 20px 20px 18px;
+
+      &:last-child{
+        width: 310px;
+      }
     }
 
     &--image {
       padding: 5rem 0 2.7rem;
       border-left: none;
-      z-index: 2;
+      z-index: 10;
       width: 25.4%;
+
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+
+    &--image-mobile {
+      display: none;
+
+      @media (max-width: $mobile) {
+        display: flex;
+        border: none;
+        margin: 0 0 18px;
+        padding: 0 20px 0 52px;
+      }
 
     }
   }
@@ -42,6 +95,12 @@
     font-size: 8.2rem;
     line-height: 7.9rem;
     margin: 0 0 4.5rem;
+
+    @media (max-width: $mobile) {
+      font-size: 40px;
+      line-height: 45px;
+      margin: 0 0 20px;
+    }
   }
 
   &__block-title {
@@ -51,17 +110,33 @@
     line-height: 2.6rem;
     margin: 0 0 1rem;
     text-transform: uppercase;
+
+    @media (max-width: $mobile) {
+      font-size: 16px;
+      line-height: 23px;
+    }
   }
 
   &__block-text {
     font-size: 1.8rem;
     line-height: 2.2rem;
     margin: 0;
+
+    @media (max-width: $mobile) {
+      font-size: 14px;
+      line-height: 17px;
+    }
   }
 
   &__image {
     position: relative;
-    z-index: 2;
+    z-index: 20;
+
+    @media (max-width: $mobile) {
+      width: 207px;
+      height: 187px;
+      margin: 0 auto;
+    }
   }
 
   &__ornament {
@@ -71,6 +146,15 @@
     width: 105.6rem;
     height: 101.7rem;
     z-index: 1;
+
+    @media (max-width: $mobile) {
+      width: 182%;
+      height: auto;
+      top: -95%;
+      left: -12%;
+      transform: scaleX(-1) rotate(-4deg);
+
+    }
   }
 
 }

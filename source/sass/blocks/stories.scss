@@ -2,11 +2,15 @@
   padding: 10rem 0 10rem;
 
   @media (max-width: $mobile) {
-    padding: 50px 0 50px;
+    padding: 50px 0 20px;
   }
 
   &__title {
     margin: 0 0 3rem;
+
+    @media (max-width: $mobile) {
+      margin: 0 0 34px;
+    }
   }
 
   &__description {
@@ -27,6 +31,14 @@
     height: 49rem;
     width: 75rem;
 
+    @media (max-width: $mobile) {
+      width: 335px;
+      max-width: 88.5%;
+      height: 351px;
+      padding: 31px 25px;
+      border-width: 1px;
+    }
+
   }
 
   &__slide-title {
@@ -39,37 +51,79 @@
     text-transform: uppercase;
     color: $purple;
     margin: 0 0 1.6rem;
+
+    @media (max-width: $mobile) {
+      font-size: 16px;
+      line-height: 23px;
+      margin: 0 0 7px;
+      width: 100%;
+    }
   }
 
   &__title-image {
     position: absolute;
     top: -1rem;
-      right: -13rem;
+    right: -13rem;
 
 
     &--dots {
       top: -1.4rem;
       right: -12.3rem;
+
+      @media (max-width: $mobile) {
+        width: 53px;
+        height: 35px;
+        top: 0;
+        right: 0;
+      }
     }
 
     &--circle {
       top: 0.7rem;
       right: -14rem;
+
+      @media (max-width: $mobile) {
+        width: 43px;
+        height: 43px;
+        right: 0;
+        top: 0;
+      }
     }
 
     &--stars {
       top: -2rem;
       right: 2rem;
+
+      @media (max-width: $mobile) {
+        width: 28px;
+        height: 36px;
+        right: 0;
+        top: -10px;
+      }
     }
 
     &--check {
       top: 0.5rem;
       right: -10.5rem;
+
+      @media (max-width: $mobile) {
+        width: 43px;
+        height: 43px;
+        right: 0;
+        top: 0;
+      }
     }
 
     &--two-stars {
       top: -1rem;
       right: -19rem;
+
+      @media (max-width: $mobile) {
+        width: 78px;
+        height: 56px;
+        right: 0;
+        top: -10px;
+      }
     }
   }
 
@@ -77,13 +131,18 @@
     max-width: 44rem;
     font-size: 1.8rem;
     line-height: 2.2rem;
+
+    @media (max-width: $mobile) {
+      font-size: 14px;
+      line-height: 17px;
+    }
   }
 
   .swiper-wrapper {
-    padding: 0 0 calc((100% - 152rem)/2);
+    padding: 0 0 0 calc((100% - 152rem)/2);
 
     @media (max-width: $mobile) {
-      padding: 0 0 40px;
+      padding: 0 0 0 20px;
     }
   }
 

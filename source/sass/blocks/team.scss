@@ -1,11 +1,19 @@
 .team {
   padding: 10rem 0 10rem;
 
+  @media (max-width: $mobile) {
+    padding: 20px 0 20px;
+  }
+
   &__header {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     margin: 0 0 3.5rem;
+
+    @media (max-width: $mobile) {
+      margin: 0 0 20px;
+    }
 
   }
 
@@ -31,6 +39,12 @@
         border-color: $pink;
       }
     }
+
+    @media (max-width: $mobile) {
+      font-size: 14px;
+      line-height: 17px;
+      margin: 0 0 18px;
+    }
   }
 
   .swiper-nav {
@@ -38,22 +52,39 @@
     align-items: center;
     gap: 2.2rem;
     margin: 0 0 1.4rem;
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
   }
 
   &__slide {
     width: 36.5rem;
 
     &:last-child {
-      width: 3rem;
+      width: calc((100% - 152rem)/2)
+    }
+
+    @media (max-width: $mobile) {
+      width: 334px;
+      max-width: 89%;
     }
   }
 
   .swiper-wrapper {
-    padding: 0 3.2rem;
+    padding-left: calc((100% - 152rem)/2);
+
+    @media (max-width: $mobile) {
+      padding-left: 20px;
+    }
   }
 
   &__photo {
     margin: 0 0 0.5rem;
+
+    @media (max-width: $mobile) {
+      margin: 0 0 6px;
+    }
   }
 
   &__name {
@@ -61,6 +92,12 @@
     line-height: 2.5rem;
     text-transform: uppercase;
     margin: 0 0 0.5rem;
+
+    @media(max-width: $mobile) {
+      font-size: 17px;
+      line-height: 23px;
+      margin: 0 0 4px;
+    }
   }
 
   &__position {
@@ -68,6 +105,12 @@
     line-height: 1.8rem;
     opacity: 0.6;
     margin: 0 0 0.5rem;
+
+    @media(max-width: $mobile) {
+      font-size: 14px;
+      line-height: 17px;
+      margin: 0 0 6px;
+    }
   }
 
   &__about {
@@ -75,6 +118,11 @@
     padding: 0.5rem 0 0;
     font-size: 1.4rem;
     line-height: 1.8rem;
+
+    @media (max-width: $mobile) {
+      font-size: 14px;
+      line-height: 17px;
+    }
   }
 
 }

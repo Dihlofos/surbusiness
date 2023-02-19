@@ -1,19 +1,56 @@
 .footer {
   padding: 11rem 0 0;
 
+  @media (max-width: $mobile) {
+    padding: 25px 0 25px;
+  }
+
   &__header {
+    position: relative;
     display: flex;
     align-items: flex-end;
     gap: 3rem;
+
+    @media (max-width: $mobile) {
+      padding: 0 50px 0 0;
+      gap: 0;
+      margin: 0 0 24px;
+    }
   }
 
   &__title {
     h2 {
       font-size: 4.5rem;
       line-height: 6.5rem;
+
+      @media(max-width: $mobile) {
+        font-size: 20px;
+        line-height: 29px;
+
+        br {
+          display: none;
+        }
+      }
     }
-    svg {
-      fill: none;
+  }
+
+  &__arrow {
+    fill: none;
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
+
+    &--mobile {
+      display: none;
+      display: block;
+      position: absolute;
+      right: 15px;
+      top: 18px;
+
+      @media (max-width: $mobile) {
+        display: block;
+      }
     }
   }
 
@@ -35,6 +72,21 @@
         border-color: $pink;
       }
     }
+
+    @media (max-width: $mobile) {
+      width: 108px;
+
+      img {
+        margin: 0 0 5px;
+        width: 86px;
+      }
+
+      span {
+        font-size: 18px;
+        line-height: 21px;
+      }
+
+    }
   }
 
   &__links {
@@ -43,6 +95,33 @@
     justify-content: space-between;
     padding: 6.3rem 26rem 0 0;
     margin: 0 0 6.3rem;
+    color: $black;
+
+    @media (max-width: $mobile) {
+      flex-direction: column-reverse;
+      padding: 0;
+      align-items: flex-start;
+      margin: 0 0 29px;
+    }
+  }
+
+  &__social-item {
+    width: 25%;
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__social-link {
+    transition: $tr;
+    color: $black;
+
+    @media (max-width: $mobile) {
+      display: block;
+
+    }
   }
 
   &__socials {
@@ -51,6 +130,12 @@
     padding: 0;
     margin: 0;
     gap: 1.8rem;
+
+    @media (max-width: $mobile) {
+      width: 100%;
+      gap: 21px;
+      margin: 0 0 20px;
+    }
   }
 
   &__policy-link {
@@ -66,10 +151,23 @@
     font-size: 1.4rem;
     line-height: 2.4rem;
 
+    @media (max-width: $mobile) {
+      font-size: 11px;
+      line-height: 13px;
+      padding: 10px 0 20px;
+      gap: 20px;
+    }
+
     p {
       margin: 0;
     }
 
+  }
+
+  &__lovely-text {
+    @media(max-width: $mobile) {
+      text-align: right;
+    }
   }
 
 }

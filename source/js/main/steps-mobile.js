@@ -1,6 +1,6 @@
 "use strict";
 (function () {
-  let steps = document.querySelectorAll(".js-step");
+  let steps = document.querySelectorAll(".js-step-item");
 
   steps.forEach((step) => {
     step.addEventListener('click', () => {

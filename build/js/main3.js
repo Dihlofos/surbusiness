@@ -298,7 +298,7 @@
     breakpoints: {
       320: {
         slidesPerView: 'auto',
-        spaceBetween: 20,
+        spaceBetween: 10,
       },
 
       768: {
@@ -328,7 +328,7 @@
 
 "use strict";
 (function () {
-  let steps = document.querySelectorAll(".js-step");
+  let steps = document.querySelectorAll(".js-step-item");
 
   steps.forEach((step) => {
     step.addEventListener('click', () => {
@@ -362,7 +362,7 @@
     breakpoints: {
       320: {
         slidesPerView: 'auto',
-        spaceBetween: 20,
+        spaceBetween: 10,
       },
 
       768: {
