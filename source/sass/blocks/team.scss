@@ -71,8 +71,13 @@
     }
   }
 
+  .swiper-container {
+    margin-top: -5rem;
+  }
+
   .swiper-wrapper {
     padding-left: calc((100% - 152rem)/2);
+    padding-top: 5rem;
 
     @media (max-width: $mobile) {
       padding-left: 20px;
@@ -122,6 +127,65 @@
     @media (max-width: $mobile) {
       font-size: 14px;
       line-height: 17px;
+    }
+  }
+
+  &__slide-image {
+    position: relative;
+  }
+
+  &__sign {
+    position: absolute;
+    z-index: 20;
+
+    &--purple-some {
+      bottom: -2.9rem;
+      right: 3.8rem;
+    }
+
+    &--suragency {
+      top: -4rem;
+      right: -6.8rem;
+    }
+
+    &--pink-some2 {
+      bottom: 3rem;
+      right: -8.8rem;
+    }
+
+    &--purple-think {
+      top: -5rem;
+      right: 1.5rem;
+    }
+
+    &--skull {
+      bottom: 4rem;
+      right: -4.5rem;
+    }
+
+    &--lightning {
+      bottom: -4rem;
+      right: 1rem;
+    }
+
+    &--pink-some3 {
+      top: -1rem;
+      right: -10rem;
+    }
+
+    &--purple-stripes {
+      bottom: 1rem;
+      right: -6rem;
+    }
+
+    &--purple-some {
+      top: 3rem;
+      right: -5.5rem;
+    }
+
+    &--purple-curves {
+      top: -3rem;
+      left: 0rem;
     }
   }
 

@@ -14,9 +14,13 @@
     z-index: 22;
     border-bottom: 1px solid $black;
 
+
+
     @media (max-width: $mobile) {
-      padding: 22px 0 8px;
-      height: 55px
+      padding: 21px 0 8px;
+      height: 55px;
+      background-color: $grey;
+      margin: 1px 0 0;
     }
   }
 
@@ -62,7 +66,8 @@
     }
 
     @media (max-width: $mobile) {
-      padding: 55px 20px 0;
+      padding: 55px 20px 20px;
+      overflow-y: auto;
     }
   }
 

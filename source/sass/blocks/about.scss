@@ -108,6 +108,10 @@
       bottom: 0.5rem;
       right: -2.9rem;
       transform: rotate(23deg);
+
+      @media (max-width: $mobile) {
+        display: none;
+      }
     }
   }
 
@@ -218,6 +222,80 @@
       top: 0;
       left: 0;
       transform: translate(-25%,-21%);
+    }
+  }
+
+  &__sign-circle {
+    display: inline-block;
+    position: relative;
+
+    img {
+      position: absolute;
+      top: -1rem;
+      left: -2.5rem;
+      max-width: initial;
+      width: 136%;
+
+      @media (max-width: $mobile) {
+        top: -14px;
+        left: -10px;
+        max-width: initial;
+        width: 149%;
+      }
+    }
+  }
+
+  &__sign-underline {
+    display: inline-block;
+    position: relative;
+
+    img {
+      position: absolute;
+      bottom: -0.7rem;
+      left: -1rem;
+      max-width: initial;
+
+      @media (max-width: $mobile) {
+        bottom: -5px;
+        left: -4px;
+        max-width: initial;
+        width: 110%;
+      }
+    }
+  }
+
+  &__sign-dashed {
+    display: inline-block;
+    position: relative;
+
+    img {
+      position: absolute;
+      bottom: -0.2rem;
+      left: 0;
+      max-width: initial;
+
+      @media (max-width: $mobile) {
+        bottom: -2px;
+        width: 100%;
+      }
+    }
+  }
+
+  &__sign-double-underline {
+    display: inline-block;
+    position: relative;
+
+    img {
+      position: absolute;
+      bottom: -2.7rem;
+      left: 3rem;
+      max-width: initial;
+
+      @media (max-width: $mobile) {
+        bottom: -25px;
+        left: 14px;
+        width: 100%;
+      }
     }
   }
 

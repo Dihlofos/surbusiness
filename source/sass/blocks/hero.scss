@@ -26,6 +26,7 @@
 
     @media (max-width: $mobile) {
       gap: 10px;
+      margin: 0 0 23px;
     }
   }
 
@@ -118,6 +119,7 @@
       font-size: 20px;
       line-height: 24px;
       gap: 12px;
+      margin: 0 0 8px;
 
       br {
         display: none;

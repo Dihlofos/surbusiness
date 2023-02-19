@@ -29,6 +29,7 @@
       font-size: 1.8rem;
       line-height: 2.2rem;
       resize: none;
+      border-radius: 0;
 
       @media(max-width: $mobile) {
         min-height: 41px;
@@ -53,7 +54,12 @@
     /* Firefox */
     input[type=number] {
       -moz-appearance: textfield;
+      -webkit-appearance: none;
     }
+
+    input {
+      -webkit-appearance: none;
+  }
   }
 
 }
