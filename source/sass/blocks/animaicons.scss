@@ -8,4 +8,27 @@
     display: none;
   }
 
+  &__column {
+    position: relative;
+    height: 10.5rem;
+    width: 10.5rem;
+    overflow: hidden;
+  }
+
+  &__image {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10.5rem;
+    height: 10.5rem;
+    align-items: center;
+    justify-content: center;
+
+    &.is-shown {
+      display: flex;
+    }
+
+  }
+
 }
