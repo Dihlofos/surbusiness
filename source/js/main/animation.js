@@ -57,6 +57,20 @@
       .setClassToggle(".footer__arrow", "svgdashed-anketa")
       .addTo(controller)
       .addIndicators();
+
+
+    // const secondStepTween = new TimelineMax()
+    //   .to(".js-step-item:nth-child(2)", 1, {top: "-410"})
+    //   .to(".js-step-item:nth-child(3)", 1, {top: "-540"})
+
+
+
+    // // build scene
+    // new ScrollMagic.Scene({triggerElement: "#steps", duration: 2000, offset: 470})
+    //   .setTween(secondStepTween)
+    //   .setPin("#steps")
+    //   .addIndicators() // add indicators (requires plugin)
+    //   .addTo(controller);
   }
 
   function initMobileAnimations() {
