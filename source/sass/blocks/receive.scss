@@ -47,6 +47,8 @@
     top: 3.5rem;
     left: 2rem;
     z-index: 0;
+    stroke-dasharray: 400;
+    stroke-dashoffset: -400;
 
     @media (max-width: $mobile) {
       transform: scaleY(-1) rotate(213deg);

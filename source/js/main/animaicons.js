@@ -8,7 +8,6 @@
     setInterval(()=>{
       changeVisibility(column);
     }, 1200);
-
   })
 
 

@@ -118,4 +118,9 @@
       line-height: 17px;
     }
   }
+
+  &__circle {
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+  }
 }
