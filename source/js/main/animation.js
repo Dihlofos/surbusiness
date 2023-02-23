@@ -13,8 +13,12 @@
 
   initCommonAnimations();
 
-  if (vw < 1023) {
+  if (vw <= 1023) {
     initMobileAnimations();
+  }
+
+  if (vw > 1023) {
+    iniDesktopAnimations();
   }
 
 
@@ -36,7 +40,6 @@
     })
       .setClassToggle(".receive__arrow", "svgdashed-arrow")
       .addTo(controller)
-      .addIndicators();
 
     // anketa arrow
     new ScrollMagic.Scene({
@@ -46,7 +49,6 @@
     })
       .setClassToggle(".anketa__circle", "svgdashed-anketa")
       .addTo(controller)
-      .addIndicators();
 
     // footer arrow
     new ScrollMagic.Scene({
@@ -56,21 +58,9 @@
     })
       .setClassToggle(".footer__arrow", "svgdashed-anketa")
       .addTo(controller)
-      .addIndicators();
-
-
-    // const secondStepTween = new TimelineMax()
-    //   .to(".js-step-item:nth-child(2)", 1, {top: "-410"})
-    //   .to(".js-step-item:nth-child(3)", 1, {top: "-540"})
 
 
 
-    // // build scene
-    // new ScrollMagic.Scene({triggerElement: "#steps", duration: 2000, offset: 470})
-    //   .setTween(secondStepTween)
-    //   .setPin("#steps")
-    //   .addIndicators() // add indicators (requires plugin)
-    //   .addTo(controller);
   }
 
   function initMobileAnimations() {
@@ -78,45 +68,52 @@
     new ScrollMagic.Scene({
       ...commonOptions,
       offset: 300,
-      reverse: true,
       triggerElement: ".advantages",
     })
       .setClassToggle(".advantages__block", "slidertudasuda")
       .addTo(controller)
-      .addIndicators();
 
     // stories slider
     new ScrollMagic.Scene({
       ...commonOptions,
       offset: 300,
-      reverse: true,
       triggerElement: ".stories",
     })
       .setClassToggle(".stories .swiper-slide", "slidertudasuda")
       .addTo(controller)
-      .addIndicators();
 
     // steps slider
     new ScrollMagic.Scene({
       ...commonOptions,
       offset: 300,
-      reverse: true,
       triggerElement: ".start",
     })
       .setClassToggle(".start__blocks .start__block", "slidertudasuda")
       .addTo(controller)
-      .addIndicators();
 
     // team slider
     new ScrollMagic.Scene({
       ...commonOptions,
       offset: 300,
-      reverse: true,
       triggerElement: ".team",
     })
       .setClassToggle(".team__slide", "slidertudasuda")
       .addTo(controller)
-      .addIndicators();
+
+  }
+
+  function iniDesktopAnimations() {
+    const secondStepTween = new TimelineMax()
+    .to(".js-step-item:nth-child(2)", 1, {top: "-450"})
+    .to(".js-step-item:nth-child(3)", 1, {top: "-558"})
+
+
+
+    // build scene
+    new ScrollMagic.Scene({triggerElement: "#steps", duration: 2000, offset: 470})
+      .setTween(secondStepTween)
+      .setPin("#steps")
+      .addTo(controller);
 
   }
 

@@ -326,7 +326,7 @@
             </div>
           </div>
         </section>
-        <section class="about">
+        <section class="about" id="about">
           <div class="container about__container">
             <div class="about__wrapper">
               <div class="about__image">
@@ -546,15 +546,16 @@
               </h2>
             </div>
             <picture>
-              <source srcset="img/fish-ornament.webp" type="image/webp">
-              <source srcset="img/fish-ornament.png" type="image/png">
-              <img class="steps__ornament" width="1607" height="1570" src="img/fish-ornament.png" alt="">
-            </picture>
-            <picture>
               <source srcset="img/fish.webp" type="image/webp">
               <source srcset="img/fish.png" type="image/png">
               <img class="steps__fish" width="569" height="456" src="img/fish-ornament.png" alt="">
             </picture>
+            <picture>
+              <source srcset="img/fish-ornament.webp" type="image/webp">
+              <source srcset="img/fish-ornament.png" type="image/png">
+              <img class="steps__ornament" width="1607" height="1570" src="img/fish-ornament.png" alt="">
+            </picture>
+
 
             <ui class="steps__list">
               <li class="steps__item js-step-item">
@@ -657,7 +658,7 @@
                   </div>
                 </div>
               </li>
-              <li class="steps__item is-open js-step-item">
+              <li class="steps__item is-open js-step-item js-step-item-last">
                 <div class="steps__label">Шаг 3</div>
                 <div class="steps__wrapper">
                   <h5 class="steps__step-title">инструменты</h5>
