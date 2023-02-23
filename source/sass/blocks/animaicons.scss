@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 7rem 0 6.2rem;
+  gap: 1rem;
 
   @media (max-width: $mobile) {
     display: none;
@@ -24,6 +25,10 @@
     height: 10.5rem;
     align-items: center;
     justify-content: center;
+
+    img {
+      max-height: 100%;
+    }
 
     &.is-shown {
       display: flex;

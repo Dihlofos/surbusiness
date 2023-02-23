@@ -99,6 +99,10 @@
     top: 20rem;
     right: -1.8rem;
     z-index: 3;
+    width: calc(100% - 113.5rem + 12rem);
+
+
+
 
     @media (max-width: $mobile) {
       width: 190px;

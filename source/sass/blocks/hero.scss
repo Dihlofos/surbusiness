@@ -1,5 +1,6 @@
 .hero {
-
+  position: relative;
+  z-index: 10;
 
   &__wrapper {
     border-bottom: 1px solid $black;
@@ -23,6 +24,8 @@
     display: flex;
     align-items: flex-start;
     margin: 0 0 3.5rem;
+
+
 
     @media (max-width: $mobile) {
       gap: 10px;
@@ -88,6 +91,11 @@
 
   &__animaicons {
     flex-grow: 1;
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
+
   }
 
   &__mobile-icons {

@@ -185,7 +185,8 @@
   &__image {
     position: relative;
     display: flex;
-    flex-grow:1;
+    flex-grow: 1;
+    z-index: 1;
 
     @media (max-width: $mobile) {
       flex-direction: column;
