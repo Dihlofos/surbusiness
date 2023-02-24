@@ -5,7 +5,7 @@
   &__wrapper {
     border-bottom: 1px solid $black;
 
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       border-bottom: none;
     }
   }
@@ -14,6 +14,10 @@
     padding: 18rem 0 22.7rem;
     max-width: 132.7rem;
     margin: 0 auto;
+
+    @media (max-width: $tablet) {
+      padding: 75px 0 0;
+    }
 
     @media (max-width: $mobile) {
       padding: 28px 0 0;
@@ -25,9 +29,7 @@
     align-items: flex-start;
     margin: 0 0 3.5rem;
 
-
-
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       gap: 10px;
       margin: 0 0 23px;
     }
@@ -38,7 +40,7 @@
     align-items: center;
     justify-content: space-between;
 
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       flex-direction: column-reverse;
     }
   }
@@ -52,7 +54,7 @@
       left: -4.5rem;
     }
 
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       display: flex;
       gap: 13px;
 
@@ -68,13 +70,13 @@
 
   &__bottom-circle {
 
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       display: none;
     }
   }
 
   &__bottom-text {
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       width: 85%;
     }
   }
@@ -84,12 +86,13 @@
     width: 38px;
     height: 38px;
 
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       display: flex;
     }
   }
 
   &__animaicons {
+    display: flex;
     flex-grow: 1;
 
     @media (max-width: $tablet) {
@@ -108,7 +111,7 @@
       height: 100%;
     }
 
-    @media (max-width:$mobile) {
+    @media (max-width: $tablet) {
       display: flex;
     }
   }
@@ -123,7 +126,7 @@
     gap: 4rem;
     align-items: center;
 
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       width: 100%;
       font-size: 20px;
       line-height: 24px;
@@ -137,7 +140,7 @@
   }
 
   &__top-logo {
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       width: 75%;
     }
   }
@@ -149,7 +152,7 @@
   &__arrow {
     margin: 0 3.5rem 0 0;
 
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       width: 38px;
       transform: rotate(180deg);
       margin: 0;

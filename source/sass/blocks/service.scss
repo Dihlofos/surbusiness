@@ -46,6 +46,11 @@
       color: $white;
     }
 
+    @media (max-width: $tablet) {
+      padding: 30px;
+      height: 28rem;
+    }
+
     @media (max-width: $mobile) {
 
       display: none;
@@ -77,6 +82,10 @@
     position: absolute;
     top: -17rem;
     right: 0;
+
+    @media (max-width: $tablet) {
+      width: 200px;
+    }
 
     @media (max-width: $mobile) {
       width: 144px;

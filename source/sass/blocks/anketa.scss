@@ -1,7 +1,7 @@
 .anketa {
   padding: 10rem 0 10rem;
 
-  @media(max-width: $mobile) {
+  @media(max-width: $tablet) {
     padding: 50px 0 50px;
 
     .container {
@@ -20,7 +20,7 @@
     flex-direction: column;
     z-index: 5;
 
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       padding: 50px 20px;
     }
   }
@@ -31,7 +31,7 @@
     top: 1rem;
     left: -10.7rem;
 
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       width: 33px;
       height: 23px;
       top: 43px;
@@ -44,7 +44,7 @@
     right: -5.5rem;
     bottom: -4.4rem;
 
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       width: 60px;
       height: auto;
       right: -7px;
@@ -60,7 +60,7 @@
       top: 0;
       left: -1.7rem;
 
-      @media (max-width: $mobile) {
+      @media (max-width: $tablet) {
         width: 137%;
         top: -13px;
         left: -27px;
@@ -78,10 +78,11 @@
     text-align: center;
     margin: 0 0 3.2rem;
 
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       font-size: 23px;
       line-height: 33px;
       margin: 0 0 30px;
+      max-width: 375px;
     }
   }
 
@@ -89,7 +90,7 @@
     text-shadow: -1px 0 $white, 0 1px $white, 1px 0 $white, 0 -1px $white;
     color: $purple;
 
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       display: block;
       margin: 30px 0 0;
     }
@@ -100,7 +101,7 @@
     margin: 0 0 2rem;
     padding: 1.2rem 0 1.2rem;
 
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       font-size: 16px;
       line-height: 19px;
       width: 100%;
@@ -113,7 +114,7 @@
     font-size: 1.8rem;
     line-height: 2.2rem;
 
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       font-size: 14px;
       line-height: 17px;
     }

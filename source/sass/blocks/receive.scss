@@ -2,12 +2,12 @@
   padding: 10rem 0 10rem;
   color: $white;
 
-  @media (max-width: $mobile) {
+  @media (max-width: $tablet) {
     padding: 40px 0;
   }
 
   .container {
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       padding: 0;
     }
   }
@@ -17,7 +17,7 @@
     display: flex;
     background-color: $purple;
 
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       flex-direction: column;
       padding: 40px 20px 50px;
     }
@@ -32,7 +32,7 @@
     margin: 0 0 3rem;
     z-index: 2;
 
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       font-size: 16px;
       line-height: 19px;
 
@@ -50,7 +50,7 @@
     stroke-dasharray: 400;
     stroke-dashoffset: -400;
 
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       transform: scaleY(-1) rotate(213deg);
       width: 109px;
       height: 109px;
@@ -72,7 +72,7 @@
     font-weight: 600;
     width: 36.5rem;
 
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       width: 100%;
       font-size: 16px;
       line-height: 19px;
@@ -86,7 +86,7 @@
     line-height: 2.2rem;
     margin: 0 0 5rem;
 
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       font-size: 14px;
       line-height: 17px;
       margin: 0 0 40px;
@@ -99,7 +99,7 @@
     top: -5rem;
     right: -11rem;
 
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       display: none;
     }
   }
@@ -108,7 +108,7 @@
     display: flex;
     margin: 0 0 2.7rem;
 
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       flex-direction: column;
       margin: 0 0 10px;
     }
@@ -127,7 +127,7 @@
       width: 38.5rem;
     }
 
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       font-size: 23px;
       line-height: 33px;
       margin: 0 0 20px;
@@ -142,7 +142,7 @@
     display: flex;
     gap: 2rem;
 
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       flex-direction: column;
       gap: 20px;
     }

@@ -13,7 +13,7 @@
 
   initCommonAnimations();
 
-  if (vw <= 1023) {
+  if (vw <= 767) {
     initMobileAnimations();
   }
 

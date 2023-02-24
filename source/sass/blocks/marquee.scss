@@ -49,6 +49,7 @@
       height: 9rem;
       background: url('../img/icons/icon-lightning.svg');
       margin: 0 3.4rem 0 2.6rem;
+      background-size: cover;
 
       @media (max-width: $mobile) {
         width: 45px;

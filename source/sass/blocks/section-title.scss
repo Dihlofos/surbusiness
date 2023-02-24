@@ -20,6 +20,11 @@
     text-transform: uppercase;
     margin: 0;
 
+    @media (max-width: $tablet) {
+      font-size: 4.6rem;
+      line-height: 6.1rem;
+    }
+
     @media (max-width:$mobile) {
       font-size: 20px;
       line-height: 29px;
