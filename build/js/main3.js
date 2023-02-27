@@ -172,7 +172,7 @@
   const MARQUEE_START_COUNT = 3;
   let MARQUEE_MOVE_INTERVAL = 15;
   const MARQUEE_MOVE_STEP = 0.4;
-  const MARQUEE_CHECK_INTERVAL = 1000;4
+  const MARQUEE_CHECK_INTERVAL = 1000;
 
   const marquee = document.querySelector('.js-marquee');
   const marqueeText = [];
@@ -206,7 +206,8 @@
 
     marqueeMoveInterval = setInterval(() => {
      marqueeLeft -= MARQUEE_MOVE_STEP;
-     marquee.style.left = `${marqueeLeft}px`;
+     // marquee.style.left = `${marqueeLeft}px`;
+     marquee.style.transform = `translateX(${marqueeLeft}px)`;
     }, MARQUEE_MOVE_INTERVAL);
 
     marqueeCheckInterval = setInterval(() => {
