@@ -9,6 +9,10 @@ html {
     @include font(7px, 7px, 400);
   }
 
+  // @media (max-height: 800px) {
+  //   @include font(7px, 7px, 400);
+  // }
+
 }
 
 .hide-cursor * {

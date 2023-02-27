@@ -49,6 +49,8 @@
     z-index: 0;
     stroke-dasharray: 400;
     stroke-dashoffset: -400;
+    width: 74.5%;
+    height: auto;
 
     @media (max-width: $tablet) {
       transform: scaleY(-1) rotate(213deg);

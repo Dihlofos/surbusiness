@@ -18,6 +18,14 @@
   }
 
   &__arrow {
+    cursor: pointer;
+
+    &.swiper-button-disabled {
+      opacity: 0.5;
+      cursor: not-allowed !important;
+      user-select: none;
+    }
+
     &--prev {
       transform: rotate(180deg) translateY(0.8rem);
     }
@@ -63,7 +71,11 @@
     width: 36.5rem;
 
     &:last-child {
-      width: calc((100% - 152rem)/2)
+      width: calc((100% - 152rem)/2);
+
+      @media (max-width: 1600px) {
+        width: 3rem;
+      }
     }
 
     @media (max-width: $mobile) {
@@ -95,6 +107,10 @@
   .swiper-wrapper {
     padding-left: calc((100% - 152rem)/2);
     padding-top: 5rem;
+
+    @media (max-width: 1600px) {
+      padding-left: 3rem;
+    }
 
     @media (max-width: $mobile) {
       padding-left: 20px;

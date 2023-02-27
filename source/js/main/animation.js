@@ -103,14 +103,39 @@
   }
 
   function iniDesktopAnimations() {
+    const title = document.querySelector('.js-steps-title');
+    const list = document.querySelector('.js-steps-list');
+    const items = document.querySelectorAll('.js-steps-item');
+    const header = document.querySelector('#header');
+    const vh = window.innerHeight;
+    const offset = 20;
+
+    const titleHeight = title.clientHeight + 60;
+    const headerHeight = header.clientHeight;
+    const itemHeight = vh - (titleHeight + headerHeight + offset);
+
+    // Set list height.
+    list.style.height = `${itemHeight}px`;
+    items.forEach( (item, index) => {
+      if (index === 1) {
+        item.style.marginTop = `${itemHeight - 100}px`;
+      }
+
+      if (index === 2) {
+        item.style.marginTop = `${itemHeight - 60}px`;
+      }
+
+    });
+
+
     const secondStepTween = new TimelineMax()
-    .to(".js-step-item:nth-child(2)", 1, {top: "-450"})
-    .to(".js-step-item:nth-child(3)", 1, {top: "-558"})
+    .to(".js-steps-item:nth-child(2)", 1, {top: `-${itemHeight - 100}`})
+    .to(".js-steps-item:nth-child(3)", 1, {top: `-${itemHeight - 60}`})
 
 
 
     // build scene
-    new ScrollMagic.Scene({triggerElement: "#steps", duration: 2000, offset: 470})
+    new ScrollMagic.Scene({triggerElement: "#steps", duration: 2500, offset: 0, triggerHook: "onLeave",})
       .setTween(secondStepTween)
       .setPin("#steps")
       .addTo(controller);
