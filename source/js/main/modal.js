@@ -103,9 +103,8 @@
             for (let [key, value] of formData.entries()) {
               res[key] = value;
             }
-            console.log("all correct, but not do anything further");
-            showStep(2);
-            // sendEmail(res);
+            console.log("all correct, but not do anything further", res);
+            sendEmail(res);
           })
           .catch((error) => {
             showStep(3);
@@ -117,9 +116,9 @@
   function sendEmail({ name, email, phone, message }) {
     formSubmitButton.setAttribute("disabled", true);
     Email.send({
-      SecureToken : "e5954290-31df-4abf-b5aa-8bb1d285f13a",
-      To : 'info@vektoruspeha.com',
-      From : "info@vektoruspeha.com",
+      SecureToken : "9a102adb-0ebd-4053-8fc7-fd178541942e",
+      To : 'business@suragency.ru',
+      From : "business@suragency.ru",
       Subject: `${name} sent you a message`,
       Body: `
         <p><h4>Здравствуйте, меня зовут: ${name}</h4></p>
@@ -129,10 +128,10 @@
       `,
     })
       .then((message) => {
-        formDone.style.opacity = 1;
+        showStep(2);
       })
       .catch((error) => {
-        formWrong.style.opaciy = 1;
+        showStep(3);
       });
   }
 

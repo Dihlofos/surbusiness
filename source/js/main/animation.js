@@ -11,6 +11,7 @@
     triggerHook: "onEnter",
   };
 
+
   initCommonAnimations();
 
   if (vw <= 767) {
