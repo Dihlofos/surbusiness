@@ -262,13 +262,22 @@
   // Form
   const form = document.querySelector(".js-form");
   const formSubmitButton = document.querySelector(".js-form-submit");
+  const phoneField = document.querySelector('#phone');
+  const phoneFieldError = document.querySelector('.js-phone-field-error');
+  let formInvalid = false;
 
   const disableBodyScroll = bodyScrollLock.disableBodyScroll;
   const enableBodyScroll = bodyScrollLock.enableBodyScroll;
 
+  const errorMap = ["Номер телефона неверный", "Неправильный код страны", "Номер слишком короткий", "Номер слишком длинный", "Номер телефона неверный"];
+
   const options = {
     reserveScrollBarGap: true,
   };
+
+  const iti = window.intlTelInput(phoneField, {
+    initialCountry: "ru",
+  });
 
   modalOpenStep1.addEventListener('click', ()=> {
     showStep(1);
@@ -335,11 +344,18 @@
     })
   }
 
-
   function initForm() {
     if (!form) return;
+
+    phoneField.addEventListener('blur', function() {
+      phoneFieldValidate();
+    });
+
     form.addEventListener("submit", (e) => {
       e.preventDefault();
+
+      if (formInvalid) return;
+      formSubmitButton.classList.add('disabled');
       grecaptcha.ready(function () {
         grecaptcha
           .execute("6LczUdEaAAAAACImrHbKWiSSutDmsNCH1sC9zXbu", {
@@ -357,7 +373,7 @@
           })
           .catch((error) => {
             showStep(3);
-          });
+          })
       });
     });
   }
@@ -381,7 +397,27 @@
       })
       .catch((error) => {
         showStep(3);
-      });
+      })
+      .finally(()=>{
+        formSubmitButton.classList.remove('disabled');
+        form.reset();
+      })
+  }
+
+  function phoneFieldValidate() {
+    if (phoneField.value.trim()) {
+      if (iti.isValidNumber()) {
+        phoneField.classList.remove("error");
+        phoneFieldError.textContent = '';
+        formInvalid = false;
+      } else {
+        phoneField.classList.add("error");
+        var errorCode = iti.getValidationError();
+        const errorMessage = errorMap[errorCode] ?? 'Введите корректный номер телефона'
+        phoneFieldError.textContent = errorMessage;
+        formInvalid = true;
+      }
+    }
   }
 
 

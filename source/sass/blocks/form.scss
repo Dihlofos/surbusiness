@@ -2,6 +2,7 @@
 
   &__input {
     width: 100%;
+    margin: 0 0 1.8rem;
 
     label {
       display: block;
@@ -18,18 +19,26 @@
       }
     }
 
+    .iti {
+      width: 100%;
+    }
+
     input,
     textarea {
       width: 100%;
       border: 2px solid $black;
       min-height: 7.3rem;
       background-color: $grey;
-      margin: 0 0 1.8rem;
+
       padding: 2.5rem 3.2rem;
       font-size: 1.8rem;
       line-height: 2.2rem;
       resize: none;
       border-radius: 0;
+
+      &.error {
+        border-color: red;
+      }
 
       @media(max-width: $mobile) {
         min-height: 41px;
@@ -60,6 +69,22 @@
     input {
       -webkit-appearance: none;
   }
+  }
+
+  &__error {
+    color: red;
+    padding: 1rem 0 0;
+  }
+
+  &__submit {
+    &.disabled {
+      pointer-events: none;
+      border-color: $deepgrey;
+      color: $black;
+      user-select: none;
+      background-color: $deepgrey;
+      cursor: not-allowed;
+    }
   }
 
 }
