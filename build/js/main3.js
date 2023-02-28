@@ -381,10 +381,10 @@
   function sendEmail({ name, email, phone, message }) {
     formSubmitButton.setAttribute("disabled", true);
     Email.send({
-      SecureToken : "9a102adb-0ebd-4053-8fc7-fd178541942e",
+      SecureToken : "b03e26ab-3244-4815-bd29-bd9edccd5aea",
       To : 'business@suragency.ru',
       From : "business@suragency.ru",
-      Subject: `${name} sent you a message`,
+      Subject: `${name} отправил вам сообщение`,
       Body: `
         <p><h4>Здравствуйте, меня зовут: ${name}</h4></p>
         <p><strong>Сообщение:</strong> ${message}</p>
