@@ -50,8 +50,8 @@
     position: relative;
     font-family: $dele;
     font-weight: 400;
-    font-size: 3.5rem;
-    line-height: 5.1rem;
+    font-size: 3rem;
+    line-height: 4.3rem;
     text-transform: uppercase;
     color: $purple;
     margin: 0 0 1.6rem;
@@ -71,8 +71,9 @@
 
 
     &--dots {
-      top: -1.4rem;
-      right: -12.3rem;
+      width: 15.6rem;
+      top: -1.2rem;
+      right: -22rem;
 
       @media (max-width: $mobile) {
         width: 53px;
@@ -83,8 +84,8 @@
     }
 
     &--circle {
-      top: 0.7rem;
-      right: -14rem;
+      top: 0.6rem;
+      right: -19.5rem;
 
       @media (max-width: $mobile) {
         width: 43px;
@@ -95,8 +96,8 @@
     }
 
     &--stars {
-      top: -2rem;
-      right: 2rem;
+      top: -1rem;
+      right: -16rem;
 
       @media (max-width: $mobile) {
         width: 28px;
@@ -120,7 +121,8 @@
 
     &--two-stars {
       top: -1rem;
-      right: -19rem;
+      right: -23rem;
+
 
       @media (max-width: $mobile) {
         width: 78px;

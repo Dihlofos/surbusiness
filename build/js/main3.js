@@ -252,7 +252,7 @@
   // Modal open/close
   const modal = document.querySelector('.js-modal');
   const modalOpen = document.querySelectorAll('.js-modal-open');
-  const modalOpenStep1 = document.querySelector('.js-modal-open-step-1');
+  const modalOpenStep1 = document.querySelectorAll('.js-modal-open-step-1');
   const modalClose = document.querySelectorAll('.js-modal-close');
   const toStepOneButton = document.querySelector('.js-step-go-1');
 
@@ -279,10 +279,14 @@
     initialCountry: "ru",
   });
 
-  modalOpenStep1.addEventListener('click', ()=> {
-    showStep(1);
-    openModal();
+  modalOpenStep1.forEach((button)=>{
+    button.addEventListener('click', ()=> {
+      showStep(1);
+      openModal();
+    })
   })
+
+
 
   // Event Listeners
   modalOpen.forEach((openButton)=>{

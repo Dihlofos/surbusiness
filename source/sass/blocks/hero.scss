@@ -11,8 +11,8 @@
   }
 
   &__content {
-    padding: 18rem 0 22.7rem;
-    max-width: 132.7rem;
+    padding: 13.7rem 0 20.7rem;
+    max-width: 148.7rem;
     margin: 0 auto;
 
     @media (max-width: $tablet) {
@@ -27,7 +27,6 @@
   &__top {
     display: flex;
     align-items: flex-start;
-    margin: 0 0 3.5rem;
 
     @media (max-width: $tablet) {
       gap: 10px;
@@ -37,8 +36,8 @@
 
   &__bottom {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-start;
+    justify-content: flex-end;
 
     @media (max-width: $tablet) {
       flex-direction: column-reverse;
@@ -47,11 +46,12 @@
 
   &__bottom-logo {
     position: relative;
+    margin-top: 0.5em;
 
     svg {
       position: absolute;
       bottom: -4.5rem;
-      left: -4.5rem;
+      right: -1.5rem;
     }
 
     @media (max-width: $tablet) {
@@ -117,14 +117,22 @@
   }
 
   &__text {
-    font-size: 3.5rem;
-    line-height: 4.2rem;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-weight: 300;
     color: $black;
     margin: 0 0 1rem;
     display: flex;
     flex-grow: 1;
-    gap: 4rem;
+    gap: 2.4rem;
     align-items: center;
+    max-width: 54.5rem;
+    margin-top: 1rem;
+    margin-right: 1.8rem;
+
+    svg {
+      flex-shrink: 0;
+    }
 
     @media (max-width: $tablet) {
       width: 100%;
@@ -140,9 +148,26 @@
   }
 
   &__top-logo {
+    padding:0 0 0 4rem;
+
     @media (max-width: $tablet) {
       width: 75%;
     }
+  }
+
+  &__upper-logo {
+    text-align: center;
+    margin: 0 0 2rem;
+  }
+
+  &__logo-text {
+    font-family: $dele;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 6.5rem;
+    line-height: 9.4rem;
+    z-index: 2;
+    position: relative;
   }
 
 

@@ -11,7 +11,7 @@
 
   &__content {
     position: relative;
-    padding: 7.7rem 4rem 4.6rem 4.6rem;
+    padding: 7.9rem 4rem 7.8rem 4.6rem;
     background-color: $purple;
     color: $white;
     display: flex;
@@ -28,8 +28,8 @@
   &__arrow {
     position: absolute;
     fill: $white;
-    top: 1rem;
-    left: -10.7rem;
+    top: 1.3rem;
+    left: -13.7rem;
 
     @media (max-width: $tablet) {
       width: 33px;
@@ -41,8 +41,8 @@
 
   &__spiral {
     position: absolute;
-    right: -5.5rem;
-    bottom: -4.4rem;
+    right: -11rem;
+    bottom: -17.4rem;
 
     @media (max-width: $tablet) {
       width: 60px;
@@ -57,8 +57,8 @@
 
     svg {
       position: absolute;
-      top: 0;
-      left: -1.7rem;
+      top: -2rem;
+      left: -0.7rem;
 
       @media (max-width: $tablet) {
         width: 137%;
@@ -76,7 +76,7 @@
     font-size: 5rem;
     line-height: 7.2rem;
     text-align: center;
-    margin: 0 0 3.2rem;
+    margin: 0 0 5rem;
 
     @media (max-width: $tablet) {
       font-size: 23px;
@@ -98,7 +98,7 @@
 
   &__button {
     width: 44.3rem;
-    margin: 0 0 2rem;
+    margin: 0 0 3.3rem;
     padding: 1.2rem 0 1.2rem;
 
     @media (max-width: $tablet) {
@@ -111,8 +111,9 @@
   }
 
   &__description {
-    font-size: 1.8rem;
-    line-height: 2.2rem;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    text-transform: uppercase;
 
     @media (max-width: $tablet) {
       font-size: 14px;
@@ -121,7 +122,7 @@
   }
 
   &__circle {
-    stroke-dasharray: 600;
-    stroke-dashoffset: 600;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
   }
 }
