@@ -29,6 +29,7 @@
     if (nav.classList.contains('is-open')) {
       nav.classList.remove('is-open');
       enableBodyScroll(nav);
+      document.querySelector('html').classList.add('is-locked');
 
       setTimeout(()=>{
         nav.style.display = 'none'
@@ -37,6 +38,7 @@
 
       nav.style.display = 'flex'
       disableBodyScroll(nav, options);
+      document.querySelector('html').classList.remove('is-locked');
 
       setTimeout(()=>{
         nav.classList.add('is-open');

@@ -19,6 +19,13 @@ html {
   cursor: none !important;
 }
 
+html.is-locked,
+html.is-locked body {
+    /* want to fix the height to the window height */
+    height: calc(var(--window-inner-height) - 1px);
+
+}
+
 
 body {
   @include font(1.6rem, 2.1rem, 400);

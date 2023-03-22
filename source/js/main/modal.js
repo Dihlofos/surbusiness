@@ -26,6 +26,20 @@
     reserveScrollBarGap: true,
   };
 
+  document.documentElement.style.setProperty(
+    '--window-inner-height',
+    `${window.innerHeight}px`
+  );
+
+  function syncHeight() {
+    document.documentElement.style.setProperty(
+        '--window-inner-height',
+        `${window.innerHeight}px`
+    );
+  }
+
+  window.addEventListener('resize', syncHeight);
+
   const iti = window.intlTelInput(phoneField, {
     initialCountry: "ru",
   });
@@ -68,6 +82,7 @@
         modal.classList.add('is-open');
 
         disableBodyScroll(modal, options);
+        document.querySelector('html').classList.add('is-locked');
       },0)
   }
 
@@ -77,6 +92,8 @@
         modal.style.display = 'none'
         clearSteps();
         enableBodyScroll(modal);
+
+        document.querySelector('html').classList.remove('is-locked');
       },200)
   }
   function clearSteps() {
