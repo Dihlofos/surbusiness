@@ -122,6 +122,37 @@
     animation-timing-function: ease-out;
   }
 
+  .animate-open-1 {
+    animation-name: animate-open;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+    animation-delay: 0.3s;
+
+  }
+
+  .animate-open-2 {
+    animation-name: animate-open;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+
+  }
+
+  @keyframes animate-open {
+    0% {
+      max-height: 30px;
+    }
+
+    80% {
+      max-height: 80px;
+    }
+
+    100% {
+      max-height: 30px;
+    }
+  }
+
   @keyframes slidertudasuda {
     0% {
       transform: translateX(0)
