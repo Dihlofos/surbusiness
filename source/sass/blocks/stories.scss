@@ -9,7 +9,7 @@
     margin: 0 0 3rem;
 
     @media (max-width: $mobile) {
-      margin: 0 0 34px;
+      margin: 0 0 18px;
     }
   }
 
@@ -20,7 +20,9 @@
     max-width: 49.8rem;
 
     @media (max-width: $mobile) {
-      display: none;
+      font-size: 14px;
+      line-height: 17px;
+      margin: 0 0 20px;
     }
   }
 

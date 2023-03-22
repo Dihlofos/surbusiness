@@ -34,7 +34,7 @@
     @media (max-width: $tablet) {
       width: 33px;
       height: 23px;
-      top: 43px;
+      top: 36px;
       left: 2px;
     }
   }
@@ -45,10 +45,11 @@
     bottom: -17.4rem;
 
     @media (max-width: $tablet) {
-      width: 60px;
+      width: 48px;
       height: auto;
-      right: -7px;
-      bottom: 37px;
+      right: 2px;
+      bottom: 57px;
+      transform: rotate(-46deg);
     }
   }
 
@@ -62,9 +63,10 @@
       width: 100%;
 
       @media (max-width: $tablet) {
-        width: 137%;
-        top: -13px;
-        left: -27px;
+        width: 114%;
+        top: -36px;
+        left: -12px;
+        transform: rotate(-4deg);
       }
     }
   }
@@ -82,7 +84,7 @@
     @media (max-width: $tablet) {
       font-size: 23px;
       line-height: 33px;
-      margin: 0 0 30px;
+      margin: 0 0 38px;
       max-width: 375px;
     }
   }
@@ -107,7 +109,7 @@
       line-height: 19px;
       width: 100%;
       padding: 13px 20px;
-      margin: 0 0 19px;
+      margin: 0 0 23px;
     }
   }
 

@@ -1,4 +1,8 @@
 .main {
   position: relative;
   padding:  9.4rem 0 0;
+
+  @media (max-width: $mobile) {
+    padding: 42px 0 0;
+  }
 }

@@ -32,6 +32,10 @@
     margin: 0 0 3rem;
     z-index: 2;
 
+    @media (max-width: $mobile) {
+      margin: 0 0 20px;
+    }
+
     @media (max-width: $tablet) {
       font-size: 16px;
       line-height: 19px;
@@ -58,7 +62,7 @@
       height: 109px;
       top: 0;
       left: auto;
-      right: -61px;
+      right: -25px;
     }
   }
 
@@ -66,6 +70,10 @@
     position: relative;
     padding: 1.5rem 0 0;
     width: 34rem;
+
+    @media (max-width: $mobile) {
+      padding: 10px 0 0;
+    }
   }
 
   &__button {

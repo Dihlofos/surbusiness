@@ -5,6 +5,20 @@
   &__wrapper {
     border-bottom: 1px solid $black;
 
+    &--desktop {
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      display: none;
+
+      @media (max-width: $tablet) {
+        display: block;
+      }
+    }
+
     @media (max-width: $tablet) {
       border-bottom: none;
     }
@@ -15,12 +29,18 @@
     max-width: 148.7rem;
     margin: 0 auto;
 
+    .hero__wrapper--mobile & {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     @media (max-width: $tablet) {
       padding: 75px 0 0;
     }
 
     @media (max-width: $mobile) {
-      padding: 28px 0 0;
+      padding: 20px 0 0;
     }
   }
 
@@ -55,31 +75,24 @@
       max-width: 100%;
     }
 
-    @media (max-width: $tablet) {
+    .hero__wrapper--mobile & {
       display: flex;
-      gap: 13px;
+      justify-content: center;
+      align-self: center;
 
       svg {
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 15%;
-        height: auto;
+        bottom: -14px;
+        right: -7px;
+        max-width: 100%;
       }
     }
+
   }
 
-  &__bottom-circle {
 
-    @media (max-width: $tablet) {
-      display: none;
-    }
-  }
 
   &__bottom-text {
-    @media (max-width: $tablet) {
-      width: 85%;
-    }
+   text-align: center;
   }
 
   &__bottom-mobile-svg {
@@ -135,6 +148,15 @@
       flex-shrink: 0;
     }
 
+    .hero__wrapper--mobile & {
+      font-size: 14px;
+      line-height: 17px;
+      margin: 24px 0 8px 10px;
+      max-width: 60%;
+      gap: 15px;
+      align-self: center;
+    }
+
     @media (max-width: $tablet) {
       width: 100%;
       font-size: 20px;
@@ -151,9 +173,11 @@
   &__top-logo {
     padding:0 0 0 4rem;
 
-    @media (max-width: $tablet) {
-      width: 75%;
+    .hero__wrapper--mobile & {
+      padding: 0;
+      gap: 20px;
     }
+
   }
 
   &__upper-logo {
@@ -169,6 +193,14 @@
     line-height: 9.4rem;
     z-index: 2;
     position: relative;
+
+    .hero__wrapper--mobile & {
+      font-size: 26px;
+      line-height: 38px;
+      display: flex;
+      margin: 0 0 1px;
+    }
+
   }
 
 

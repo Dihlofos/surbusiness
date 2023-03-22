@@ -2,7 +2,7 @@
   padding: 10rem 0 10rem;
 
   @media (max-width: $mobile) {
-    padding: 50px 0 20px;
+    padding: 42px 0 20px;
 
     .container {
       padding: 0;
@@ -55,6 +55,7 @@
     @media (max-width: $tablet) {
       width: 33%;
 
+
       &:last-child{
         width: 33%;
       }
@@ -63,7 +64,7 @@
     @media (max-width: $mobile) {
       width: 310px;
       flex-shrink: 0;
-      padding: 0 20px 20px 18px;
+      padding: 0 61px 40px 18px;
 
       &:last-child{
         width: 310px;
@@ -85,7 +86,7 @@
       display: none;
 
       @media (max-width: $mobile) {
-        height: 183px;
+        height: 195px;
         display: flex;
         border: none;
         margin: 0 0 18px;
