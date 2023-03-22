@@ -81,7 +81,7 @@
       setTimeout(()=>{
         modal.classList.add('is-open');
 
-        disableBodyScroll(modal, options);
+        // disableBodyScroll(modal, options);
         // document.querySelector('html').classList.add('is-locked');
       },0)
   }
@@ -91,7 +91,7 @@
       setTimeout(()=>{
         modal.style.display = 'none'
         clearSteps();
-        enableBodyScroll(modal);
+        // enableBodyScroll(modal);
 
         // document.querySelector('html').classList.remove('is-locked');
       },200)

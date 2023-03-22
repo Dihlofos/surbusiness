@@ -330,7 +330,7 @@
       setTimeout(()=>{
         modal.classList.add('is-open');
 
-        disableBodyScroll(modal, options);
+        // disableBodyScroll(modal, options);
         // document.querySelector('html').classList.add('is-locked');
       },0)
   }
@@ -340,7 +340,7 @@
       setTimeout(()=>{
         modal.style.display = 'none'
         clearSteps();
-        enableBodyScroll(modal);
+        // enableBodyScroll(modal);
 
         // document.querySelector('html').classList.remove('is-locked');
       },200)
@@ -475,7 +475,7 @@
 
     if (nav.classList.contains('is-open')) {
       nav.classList.remove('is-open');
-      enableBodyScroll(nav);
+      // enableBodyScroll(nav);
       // document.querySelector('html').classList.add('is-locked');
 
       setTimeout(()=>{
@@ -484,7 +484,7 @@
     } else {
 
       nav.style.display = 'flex'
-      disableBodyScroll(nav, options);
+      // disableBodyScroll(nav, options);
       // document.querySelector('html').classList.remove('is-locked');
 
       setTimeout(()=>{
