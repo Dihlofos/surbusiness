@@ -1,0 +1,66 @@
+.art-strategy {
+  position: relative;
+  padding: 8rem 0 6rem;
+  z-index: 2;
+
+  &__title {
+    margin: 0 0 5rem;
+  }
+
+  &__description {
+    max-width: 104.4rem;
+    margin: 0 0 6.5rem;
+  }
+
+  &__decor {
+    position: absolute;
+    top: -22rem;
+    right: -81rem;
+    z-index: 2;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 5;
+  }
+
+  &__bullit {
+    position: relative;
+  }
+
+  &__octopus {
+    position: absolute;
+    bottom: -21rem;
+    right: -5rem;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    gap: 4.2rem;
+    align-items: center;
+    margin: 0 0 3.1rem;
+  }
+
+  &__text {
+    font-size: 2.5rem;
+    line-height: normal;
+
+    span {
+      font-family: $dele;
+      text-transform: uppercase;
+    }
+
+    b {
+      font-weight: normal;
+    }
+  }
+
+  .article__title {
+    margin: 0 0 4rem;
+  }
+}

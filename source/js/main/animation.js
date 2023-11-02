@@ -11,7 +11,6 @@
     triggerHook: "onEnter",
   };
 
-
   initCommonAnimations();
 
   if (vw <= 767) {
@@ -22,7 +21,6 @@
     iniDesktopAnimations();
   }
 
-
   function initCommonAnimations() {
     // hero circle
     new ScrollMagic.Scene({
@@ -32,7 +30,6 @@
       .setClassToggle(".hero__bottom-circle", "svgdashed")
       .addTo(controller);
 
-
     // recieave arrow
     new ScrollMagic.Scene({
       ...commonOptions,
@@ -40,7 +37,7 @@
       triggerElement: ".receive",
     })
       .setClassToggle(".receive__arrow", "svgdashed-arrow")
-      .addTo(controller)
+      .addTo(controller);
 
     // anketa arrow
     new ScrollMagic.Scene({
@@ -49,7 +46,7 @@
       triggerElement: ".anketa",
     })
       .setClassToggle(".anketa__circle", "svgdashed-anketa")
-      .addTo(controller)
+      .addTo(controller);
 
     // footer arrow
     new ScrollMagic.Scene({
@@ -58,10 +55,7 @@
       triggerElement: ".footer",
     })
       .setClassToggle(".footer__arrow", "svgdashed-anketa")
-      .addTo(controller)
-
-
-
+      .addTo(controller);
   }
 
   function initMobileAnimations() {
@@ -72,7 +66,7 @@
       triggerElement: ".advantages",
     })
       .setClassToggle(".advantages__block", "slidertudasuda")
-      .addTo(controller)
+      .addTo(controller);
 
     // stories slider
     new ScrollMagic.Scene({
@@ -81,7 +75,7 @@
       triggerElement: ".stories",
     })
       .setClassToggle(".stories .swiper-slide", "slidertudasuda")
-      .addTo(controller)
+      .addTo(controller);
 
     // steps slider
     new ScrollMagic.Scene({
@@ -90,7 +84,7 @@
       triggerElement: ".start",
     })
       .setClassToggle(".start__blocks .start__block", "slidertudasuda")
-      .addTo(controller)
+      .addTo(controller);
 
     // team slider
     new ScrollMagic.Scene({
@@ -99,45 +93,40 @@
       triggerElement: ".team",
     })
       .setClassToggle(".team__slide", "slidertudasuda")
-      .addTo(controller)
+      .addTo(controller);
 
+    const step1 = document.querySelector(".js-steps-item-1");
+    const step2 = document.querySelector(".js-steps-item-2");
 
-  const step1 =document.querySelector('.js-steps-item-1');
-  const step2 = document.querySelector('.js-steps-item-2');
-
-  const stepsScene = new ScrollMagic.Scene({
+    const stepsScene = new ScrollMagic.Scene({
       triggerElement: ".steps",
       offset: 300,
       duration: 1,
-    })
-    .addTo(controller);
+    }).addTo(controller);
 
-    stepsScene.on('enter', function(){
-      step1.classList.add('animate-open-1');
-      step2.classList.add('animate-open-2');
-
+    stepsScene.on("enter", function () {
+      step1.classList.add("animate-open-1");
+      step2.classList.add("animate-open-2");
     });
 
-    stepsScene.on('leave', function(){
-      setTimeout(()=>{
-        step1.classList.remove('animate-open-1');
-        step2.classList.remove('animate-open-2');
-      }, 1500)
-
+    stepsScene.on("leave", function () {
+      setTimeout(() => {
+        step1.classList.remove("animate-open-1");
+        step2.classList.remove("animate-open-2");
+      }, 1500);
     });
-
-
-
-
   }
 
   function iniDesktopAnimations() {
-    const title = document.querySelector('.js-steps-title');
-    const list = document.querySelector('.js-steps-list');
-    const items = document.querySelectorAll('.js-steps-item');
-    const header = document.querySelector('#header');
+    const title = document.querySelector(".js-steps-title");
+    const list = document.querySelector(".js-steps-list");
+    const items = document.querySelectorAll(".js-steps-item");
+    const header = document.querySelector("#header");
     const vh = window.innerHeight;
     const offset = 20;
+    if (!title) {
+      return;
+    }
 
     const titleHeight = title.clientHeight + 60;
     const headerHeight = header.clientHeight;
@@ -145,7 +134,7 @@
 
     // Set list height.
     list.style.height = `${itemHeight}px`;
-    items.forEach( (item, index) => {
+    items.forEach((item, index) => {
       if (index === 1) {
         item.style.marginTop = `${itemHeight - 100}px`;
       }
@@ -153,25 +142,21 @@
       if (index === 2) {
         item.style.marginTop = `${itemHeight - 60}px`;
       }
-
     });
 
-
     const secondStepTween = new TimelineMax()
-    .to(".js-steps-item:nth-child(2)", 1, {top: `-${itemHeight - 100}`})
-    .to(".js-steps-item:nth-child(3)", 1, {top: `-${itemHeight - 60}`})
-
-
+      .to(".js-steps-item:nth-child(2)", 1, { top: `-${itemHeight - 100}` })
+      .to(".js-steps-item:nth-child(3)", 1, { top: `-${itemHeight - 60}` });
 
     // build scene
-    new ScrollMagic.Scene({triggerElement: "#steps", duration: 2500, offset: 0, triggerHook: "onLeave",})
+    new ScrollMagic.Scene({
+      triggerElement: "#steps",
+      duration: 2500,
+      offset: 0,
+      triggerHook: "onLeave",
+    })
       .setTween(secondStepTween)
       .setPin("#steps")
       .addTo(controller);
-
   }
-
-
-
-
 })();

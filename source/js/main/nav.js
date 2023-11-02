@@ -1,9 +1,12 @@
 "use strict";
 (function () {
+  const burger = document.querySelector(".js-nav-burger");
+  const nav = document.querySelector(".js-nav");
+  const links = document.querySelectorAll(".js-link");
 
-  const burger = document.querySelector('.js-nav-burger');
-  const nav = document.querySelector('.js-nav');
-  const links = document.querySelectorAll('.js-link');
+  if (!burger) {
+    return;
+  }
 
   const disableBodyScroll = bodyScrollLock.disableBodyScroll;
   const enableBodyScroll = bodyScrollLock.enableBodyScroll;
@@ -12,42 +15,36 @@
     reserveScrollBarGap: true,
   };
 
-  burger.addEventListener('click', () => {
+  burger.addEventListener("click", () => {
     toggleNav();
-  })
+  });
 
-  links.forEach((link)=> {
-    link.addEventListener('click', ()=> {
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
       toggleNav();
-    })
-  })
+    });
+  });
 
   function toggleNav() {
     const timeout = 200;
-    burger.classList.toggle('is-open');
+    burger.classList.toggle("is-open");
 
-    if (nav.classList.contains('is-open')) {
-      nav.classList.remove('is-open');
+    if (nav.classList.contains("is-open")) {
+      nav.classList.remove("is-open");
       // enableBodyScroll(nav);
       // document.querySelector('html').classList.add('is-locked');
 
-      setTimeout(()=>{
-        nav.style.display = 'none'
+      setTimeout(() => {
+        nav.style.display = "none";
       }, timeout);
     } else {
-
-      nav.style.display = 'flex'
+      nav.style.display = "flex";
       // disableBodyScroll(nav, options);
       // document.querySelector('html').classList.remove('is-locked');
 
-      setTimeout(()=>{
-        nav.classList.add('is-open');
+      setTimeout(() => {
+        nav.classList.add("is-open");
       }, 0);
-
-
     }
   }
-
-
-
 })();

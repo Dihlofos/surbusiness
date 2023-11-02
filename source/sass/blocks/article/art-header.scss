@@ -1,0 +1,35 @@
+.art-header {
+
+  .hero {
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding: 5.6rem 0 6.5rem;
+    }
+
+    &__bottom {
+      flex-direction: column;
+      flex-shrink: 0
+    }
+
+    &__bottom-logo svg {
+      bottom: -1.5rem;
+      right: -0.8rem;
+      max-width: 106%;
+    }
+
+    &__logo-text {
+      font-size: 5rem;
+      line-height: 1.34;
+
+      &--center {
+        margin-left: 13rem;
+      }
+    }
+
+    .animaicons {
+      padding: 0 0 0 9rem;
+    }
+  };
+
+}

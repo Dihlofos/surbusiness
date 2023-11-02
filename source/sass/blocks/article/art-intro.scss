@@ -1,0 +1,53 @@
+.art-intro {
+  position: relative;
+  padding: 0 0 6rem;
+
+  &__text {
+    font-size: 2.5rem;
+    line-height: 1.4;
+    max-width: 97.8rem;
+    margin: 0 0 11rem;
+
+    p:not(:last-child) {
+      margin: 0 0 2.3rem;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    top: -17.6rem;
+    right: -53.5rem;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 400;
+    font-family: $dele;
+    color: $purple;
+    margin: 0 0 5rem;
+  }
+
+  &__bullits {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__bullit {
+    display: flex;
+    align-items: center;
+    gap: 4.8rem;
+    margin: 0 0 2.25rem;
+
+    img {
+      flex-shrink: 0;
+    }
+
+    span {
+      flex-grow: 1;
+      font-family: $dele;
+      font-size: 2.5rem;
+    }
+  }
+
+}

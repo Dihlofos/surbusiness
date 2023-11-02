@@ -1,0 +1,90 @@
+.profits {
+  padding: 8.7rem 0 8rem;
+
+  &__title {
+    font-family: $dele;
+    text-transform: uppercase;
+    font-size: 3rem;
+    line-height: normal;
+    color: $dark-grey;
+    margin: 0 0 5.4rem;
+  }
+
+  &__table {
+    display: flex;
+  }
+
+  &__column {
+    width: 54.2%;
+    padding-right: 0;
+    padding-left: 4.5rem;
+
+    .profits__header {
+      padding-right: 4.5rem;
+    }
+
+    &:first-child {
+      border-right: 2px solid $purple;
+      padding-left: 0;
+      padding-right: 2.8rem;
+      width: 45.8%;
+
+      .profits__header {
+        padding-right: 3rem;
+      }
+    }
+  }
+
+  &__rows {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+  }
+
+  &__row {
+    margin: 0 0 4rem;
+
+    h6 {
+      font-family: $dele;
+      font-size: 2.5rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin: 0 0 1.5rem;
+    }
+
+    p {
+      margin: 0;
+      line-height: normal;
+    }
+
+    ul {
+      padding: 0.3rem 0 0 4rem;
+      list-style-type: disc;
+    }
+
+    li {
+      font-size: 2.5rem;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0 0 1.8rem;
+
+    span {
+      font-family: $dele;
+      text-transform: uppercase;
+      font-size: 2.5rem;
+      line-height: 1.4;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      color: $purple;
+    }
+  }
+
+}

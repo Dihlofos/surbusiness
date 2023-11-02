@@ -1,0 +1,59 @@
+.art-campaign {
+  padding: 2.4rem 0 2rem;
+
+  &__title {
+    margin: 0 0 5rem;
+  }
+
+  &__step {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    margin: 0 0 6.5rem;
+
+    ul {
+      margin: 0 0 5.5rem;
+      padding: 0 0 0 3.2rem;
+    }
+
+    li {
+      margin: 0 0 0.8rem;
+    }
+
+    &--second {
+      position: relative;
+      margin: 0 0 6rem;
+
+      li {
+        margin: 0 0 1rem;
+      }
+    }
+
+  }
+
+  &__step-title {
+    display: flex;
+    font-size: 3rem;
+    line-height: normal;
+    font-family: $dele;
+    text-transform: uppercase;
+    margin: 0 0 4.2rem;
+    color: $purple;
+    gap: 1.5rem;
+    max-width: 101.7rem;
+  }
+
+  &__decor {
+    position: absolute;
+    top: 9.5rem;
+    right: -42.5rem;
+  }
+
+  &__descr {
+    p {
+      margin: 0 0 5.5rem;
+    }
+  }
+
+
+
+}

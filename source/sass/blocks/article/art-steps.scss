@@ -1,0 +1,107 @@
+.art-steps {
+  position: relative;
+  z-index: 4;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 3.5rem 0 0 0;
+  }
+
+  &__item {
+    position: relative;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border: 2px solid $purple;
+    padding: 5.5rem 5.1rem 11rem;
+    background-color: $grey;
+
+    &:not(:first-child) {
+      margin-top: -5rem;
+    }
+
+    &:last-child {
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: -8rem;
+    left: 3.5rem;
+    display: inline-flex;
+    border-radius: 45px;
+    background-color: #8469ff;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 1;
+    text-align: center;
+    padding: 3.4rem 3.3rem;
+    font-weight: 400;
+  }
+
+  &__block {
+    display: flex;
+    padding: 4.2rem 0 4.2rem;
+    border-bottom: 2px solid $purple;
+
+    &--no-border {
+      border: none;
+    }
+  }
+
+  &__block-header {
+    font-size: 2.5rem;
+    line-height: normal;
+    font-family: $dele;
+    width: 36rem;
+    flex-shrink: 0;
+    flex-grow: 0;
+    text-transform: uppercase;
+    padding: 0 4rem 0 0;
+
+    &--small-pad {
+      padding-right: 1rem;
+    }
+  }
+
+  &__block-content {
+    flex-grow: 1;
+
+    p {
+      line-height: 1.2;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__simple-list {
+    font-size: 2.5rem;
+    line-height: normal;
+
+    li {
+      margin: 0 0 1rem;
+    }
+  }
+
+  &__link {
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: none;
+    color: $purple;
+    font-size: 2.5rem;
+    cursor: pointer;
+    border-bottom: 1px solid currentColor;
+
+    &:hover {
+      color: $pink;
+    }
+  }
+
+  .purple-list {
+    max-width: 59.8rem;
+  }
+}

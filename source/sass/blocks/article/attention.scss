@@ -1,0 +1,21 @@
+.attention {
+  position: relative;
+  padding-top: 18rem;
+  margin-top: -11rem;
+
+  &__decor {
+    position: absolute;
+    bottom: 20rem;
+    left: 12rem;
+  }
+  &__text {
+    color: $white;
+    font-family: $dele;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: normal;
+    background-color: $purple;
+    padding: 2.8rem 4.1rem 4.1rem 4.1rem;
+  }
+}

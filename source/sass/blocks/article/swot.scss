@@ -1,0 +1,94 @@
+.swot {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -2rem 6rem;
+
+  &__block {
+    border: 1px solid $purple;
+    padding: 2rem 1rem 1rem 2rem;
+    width: 32.5%;
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      border-top: none;
+      padding-top: 1rem;
+    }
+
+    &:nth-child(7),
+    &:nth-child(8),
+    &:nth-child(9) {
+      border-bottom: none;
+    }
+
+    &:nth-child(1),
+    &:nth-child(4),
+    &:nth-child(7) {
+      border-left: none;
+      padding-left: 0;
+    }
+
+    &:nth-child(3),
+    &:nth-child(6),
+    &:nth-child(9) {
+      border-right: none;
+      padding-right: 0;
+    }
+
+    &:nth-child(2),
+    &:nth-child(5),
+    &:nth-child(8) {
+      width: 35%;
+    }
+
+    &:nth-child(1) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  p {
+    font-size: 1.8rem;
+    line-height: normal;
+    margin: 0;
+  }
+
+  .purple-list {
+    li {
+      margin: 0 0 1.2rem;
+    }
+  }
+
+  &__letter {
+    font-family: $dele;
+    font-size: 2.5rem;
+    margin: 0 0 1rem;
+
+    .purple {
+      color: #876DFF;
+    }
+
+    .green {
+      color: #00C1A3;
+    }
+
+    .light-purple {
+      color: #A467BF;
+    }
+
+    .light-red {
+      color: #EE3F7C;
+    }
+  }
+
+  &__title {
+    font-family: $dele;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    line-height: normal;
+    margin: 0 0 2.8rem;
+    color: $dark-grey;
+  }
+
+}

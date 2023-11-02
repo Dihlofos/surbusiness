@@ -1,0 +1,53 @@
+.art-packing {
+  padding: 5.5rem 0 5rem;
+
+  &__title {
+    margin: 0 0 6rem;
+  }
+
+  &__text-block {
+    margin: 0 0 6.5rem;
+
+    p {
+      margin: 0 0 3.5rem;
+     &:last-child {
+      margin-bottom: 0;
+     }
+    }
+  }
+
+  &__subtitle {
+    font-family: $dele;
+    text-transform: uppercase;
+    color: $purple;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 0 3rem;
+  }
+
+  &__images {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 0 0 5rem;
+  }
+
+  &__image {
+    position: relative;
+    z-index: 4;
+    margin-top: 3.5rem;
+    margin-right: 1rem;
+  }
+
+  &__decor {
+    position: absolute;
+    bottom: -21rem;
+    right: -29rem;
+    z-index: 3;
+  }
+
+
+
+}

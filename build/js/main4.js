@@ -39,7 +39,6 @@
     triggerHook: "onEnter",
   };
 
-
   initCommonAnimations();
 
   if (vw <= 767) {
@@ -50,7 +49,6 @@
     iniDesktopAnimations();
   }
 
-
   function initCommonAnimations() {
     // hero circle
     new ScrollMagic.Scene({
@@ -60,7 +58,6 @@
       .setClassToggle(".hero__bottom-circle", "svgdashed")
       .addTo(controller);
 
-
     // recieave arrow
     new ScrollMagic.Scene({
       ...commonOptions,
@@ -68,7 +65,7 @@
       triggerElement: ".receive",
     })
       .setClassToggle(".receive__arrow", "svgdashed-arrow")
-      .addTo(controller)
+      .addTo(controller);
 
     // anketa arrow
     new ScrollMagic.Scene({
@@ -77,7 +74,7 @@
       triggerElement: ".anketa",
     })
       .setClassToggle(".anketa__circle", "svgdashed-anketa")
-      .addTo(controller)
+      .addTo(controller);
 
     // footer arrow
     new ScrollMagic.Scene({
@@ -86,10 +83,7 @@
       triggerElement: ".footer",
     })
       .setClassToggle(".footer__arrow", "svgdashed-anketa")
-      .addTo(controller)
-
-
-
+      .addTo(controller);
   }
 
   function initMobileAnimations() {
@@ -100,7 +94,7 @@
       triggerElement: ".advantages",
     })
       .setClassToggle(".advantages__block", "slidertudasuda")
-      .addTo(controller)
+      .addTo(controller);
 
     // stories slider
     new ScrollMagic.Scene({
@@ -109,7 +103,7 @@
       triggerElement: ".stories",
     })
       .setClassToggle(".stories .swiper-slide", "slidertudasuda")
-      .addTo(controller)
+      .addTo(controller);
 
     // steps slider
     new ScrollMagic.Scene({
@@ -118,7 +112,7 @@
       triggerElement: ".start",
     })
       .setClassToggle(".start__blocks .start__block", "slidertudasuda")
-      .addTo(controller)
+      .addTo(controller);
 
     // team slider
     new ScrollMagic.Scene({
@@ -127,45 +121,40 @@
       triggerElement: ".team",
     })
       .setClassToggle(".team__slide", "slidertudasuda")
-      .addTo(controller)
+      .addTo(controller);
 
+    const step1 = document.querySelector(".js-steps-item-1");
+    const step2 = document.querySelector(".js-steps-item-2");
 
-  const step1 =document.querySelector('.js-steps-item-1');
-  const step2 = document.querySelector('.js-steps-item-2');
-
-  const stepsScene = new ScrollMagic.Scene({
+    const stepsScene = new ScrollMagic.Scene({
       triggerElement: ".steps",
       offset: 300,
       duration: 1,
-    })
-    .addTo(controller);
+    }).addTo(controller);
 
-    stepsScene.on('enter', function(){
-      step1.classList.add('animate-open-1');
-      step2.classList.add('animate-open-2');
-
+    stepsScene.on("enter", function () {
+      step1.classList.add("animate-open-1");
+      step2.classList.add("animate-open-2");
     });
 
-    stepsScene.on('leave', function(){
-      setTimeout(()=>{
-        step1.classList.remove('animate-open-1');
-        step2.classList.remove('animate-open-2');
-      }, 1500)
-
+    stepsScene.on("leave", function () {
+      setTimeout(() => {
+        step1.classList.remove("animate-open-1");
+        step2.classList.remove("animate-open-2");
+      }, 1500);
     });
-
-
-
-
   }
 
   function iniDesktopAnimations() {
-    const title = document.querySelector('.js-steps-title');
-    const list = document.querySelector('.js-steps-list');
-    const items = document.querySelectorAll('.js-steps-item');
-    const header = document.querySelector('#header');
+    const title = document.querySelector(".js-steps-title");
+    const list = document.querySelector(".js-steps-list");
+    const items = document.querySelectorAll(".js-steps-item");
+    const header = document.querySelector("#header");
     const vh = window.innerHeight;
     const offset = 20;
+    if (!title) {
+      return;
+    }
 
     const titleHeight = title.clientHeight + 60;
     const headerHeight = header.clientHeight;
@@ -173,7 +162,7 @@
 
     // Set list height.
     list.style.height = `${itemHeight}px`;
-    items.forEach( (item, index) => {
+    items.forEach((item, index) => {
       if (index === 1) {
         item.style.marginTop = `${itemHeight - 100}px`;
       }
@@ -181,27 +170,23 @@
       if (index === 2) {
         item.style.marginTop = `${itemHeight - 60}px`;
       }
-
     });
 
-
     const secondStepTween = new TimelineMax()
-    .to(".js-steps-item:nth-child(2)", 1, {top: `-${itemHeight - 100}`})
-    .to(".js-steps-item:nth-child(3)", 1, {top: `-${itemHeight - 60}`})
-
-
+      .to(".js-steps-item:nth-child(2)", 1, { top: `-${itemHeight - 100}` })
+      .to(".js-steps-item:nth-child(3)", 1, { top: `-${itemHeight - 60}` });
 
     // build scene
-    new ScrollMagic.Scene({triggerElement: "#steps", duration: 2500, offset: 0, triggerHook: "onLeave",})
+    new ScrollMagic.Scene({
+      triggerElement: "#steps",
+      duration: 2500,
+      offset: 0,
+      triggerHook: "onLeave",
+    })
       .setTween(secondStepTween)
       .setPin("#steps")
       .addTo(controller);
-
   }
-
-
-
-
 })();
 
 "use strict";
@@ -221,58 +206,57 @@
 
 "use strict";
 (function () {
-
-
   const MARQUEE_START_COUNT = 3;
   let MARQUEE_MOVE_INTERVAL = 15;
   const MARQUEE_MOVE_STEP = 0.4;
   const MARQUEE_CHECK_INTERVAL = 1000;
 
-  const marquee = document.querySelector('.js-marquee');
+  const marquee = document.querySelector(".js-marquee");
   const marqueeText = [];
   let marqueeLeft = 0;
   let marqueeMoveInterval = null;
   let marqueeCheckInterval = null;
+  if (!marquee) {
+    return;
+  }
 
   initMarquee();
 
-
   function initMarquee() {
     for (let i = 0; i < marquee.children.length; i++) {
-     marqueeText.push(marquee.children[i].innerText);
+      marqueeText.push(marquee.children[i].innerText);
     }
-    marquee.innerHTML = '';
+    marquee.innerHTML = "";
     mountMarquee();
-   }
+  }
 
-   function addItemsToMarquee() {
-    marqueeText.forEach(item => {
-     const p = document.createElement('p');
-     p.innerText = item;
-     marquee.appendChild(p);
+  function addItemsToMarquee() {
+    marqueeText.forEach((item) => {
+      const p = document.createElement("p");
+      p.innerText = item;
+      marquee.appendChild(p);
     });
-   }
+  }
 
-   function mountMarquee() {
+  function mountMarquee() {
     for (let i = 0; i < MARQUEE_START_COUNT; i++) {
-     addItemsToMarquee();
+      addItemsToMarquee();
     }
 
     marqueeMoveInterval = setInterval(() => {
-     marqueeLeft -= MARQUEE_MOVE_STEP;
-     // marquee.style.left = `${marqueeLeft}px`;
-     marquee.style.transform = `translateX(${marqueeLeft}px)`;
+      marqueeLeft -= MARQUEE_MOVE_STEP;
+      // marquee.style.left = `${marqueeLeft}px`;
+      marquee.style.transform = `translateX(${marqueeLeft}px)`;
     }, MARQUEE_MOVE_INTERVAL);
 
     marqueeCheckInterval = setInterval(() => {
-     const marqueeChildren = marquee.children;
-     const lastChildOfMarquee = marqueeChildren[marqueeChildren.length - 1];
-     const { left } = lastChildOfMarquee.getBoundingClientRect();
-     if (left > window.innerWidth) return;
-     addItemsToMarquee();
+      const marqueeChildren = marquee.children;
+      const lastChildOfMarquee = marqueeChildren[marqueeChildren.length - 1];
+      const { left } = lastChildOfMarquee.getBoundingClientRect();
+      if (left > window.innerWidth) return;
+      addItemsToMarquee();
     }, MARQUEE_CHECK_INTERVAL);
-   }
-
+  }
 })();
 
 "use strict";
@@ -475,10 +459,13 @@
 
 "use strict";
 (function () {
+  const burger = document.querySelector(".js-nav-burger");
+  const nav = document.querySelector(".js-nav");
+  const links = document.querySelectorAll(".js-link");
 
-  const burger = document.querySelector('.js-nav-burger');
-  const nav = document.querySelector('.js-nav');
-  const links = document.querySelectorAll('.js-link');
+  if (!burger) {
+    return;
+  }
 
   const disableBodyScroll = bodyScrollLock.disableBodyScroll;
   const enableBodyScroll = bodyScrollLock.enableBodyScroll;
@@ -487,44 +474,38 @@
     reserveScrollBarGap: true,
   };
 
-  burger.addEventListener('click', () => {
+  burger.addEventListener("click", () => {
     toggleNav();
-  })
+  });
 
-  links.forEach((link)=> {
-    link.addEventListener('click', ()=> {
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
       toggleNav();
-    })
-  })
+    });
+  });
 
   function toggleNav() {
     const timeout = 200;
-    burger.classList.toggle('is-open');
+    burger.classList.toggle("is-open");
 
-    if (nav.classList.contains('is-open')) {
-      nav.classList.remove('is-open');
+    if (nav.classList.contains("is-open")) {
+      nav.classList.remove("is-open");
       // enableBodyScroll(nav);
       // document.querySelector('html').classList.add('is-locked');
 
-      setTimeout(()=>{
-        nav.style.display = 'none'
+      setTimeout(() => {
+        nav.style.display = "none";
       }, timeout);
     } else {
-
-      nav.style.display = 'flex'
+      nav.style.display = "flex";
       // disableBodyScroll(nav, options);
       // document.querySelector('html').classList.remove('is-locked');
 
-      setTimeout(()=>{
-        nav.classList.add('is-open');
+      setTimeout(() => {
+        nav.classList.add("is-open");
       }, 0);
-
-
     }
   }
-
-
-
 })();
 
 "use strict";
@@ -585,6 +566,32 @@
       step.classList.toggle('is-open')
     })
   })
+})();
+
+"use strict";
+(function () {
+  var sticky = document.getElementsByClassName("js-sticky")[0];
+  var stickyAnchor = sticky.parentNode;
+  var state = false;
+
+  function getAnchorOffset() {
+    return stickyAnchor.getBoundingClientRect().top;
+  }
+
+  const updateSticky = function (e) {
+    if (!state && getAnchorOffset() < 140) {
+      sticky.classList.add("is-sticky");
+      state = true;
+    } else if (state && getAnchorOffset() >= 140) {
+      sticky.classList.remove("is-sticky");
+      state = false;
+    }
+  };
+
+  window.addEventListener("scroll", updateSticky);
+  window.addEventListener("resize", updateSticky);
+
+  updateSticky();
 })();
 
 "use strict";

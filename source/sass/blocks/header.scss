@@ -51,6 +51,15 @@
     }
   }
 
+  &__main-link {
+    position: relative;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $black;
+    z-index: 4;
+  }
+
   &__content {
     position: absolute;
     display: flex;
