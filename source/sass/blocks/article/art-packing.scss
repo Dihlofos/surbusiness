@@ -46,6 +46,11 @@
     bottom: -21rem;
     right: -29rem;
     z-index: 3;
+
+    @media (max-width: $laptop) {
+      right: -70rem;
+      bottom: -30rem;
+    }
   }
 
 

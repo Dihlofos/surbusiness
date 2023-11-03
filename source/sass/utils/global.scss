@@ -13,6 +13,10 @@ html {
     @include font(8px, 8px, 400);
   }
 
+  @media (max-width: $tablet) {
+    @include font(10px, 10px, 400);
+  }
+
 }
 
 .hide-cursor * {

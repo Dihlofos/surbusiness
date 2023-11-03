@@ -5,17 +5,61 @@
       display: flex;
       justify-content: space-between;
       padding: 5.6rem 0 6.5rem;
+
+      @media (max-width: $mobile) {
+        padding: 3.4rem 0 4rem;
+      }
+
+      @media (max-width: $tablet) {
+        justify-content: flex-start;
+        align-items: flex-end;
+        border-bottom: 1px solid #100f0f;
+      }
+
+
     }
 
     &__bottom {
       flex-direction: column;
-      flex-shrink: 0
+      flex-shrink: 0;
+
+      &--desktop {
+        display: flex;
+      }
+
+      &--mobile {
+        display: none;
+      }
+
+      @media (max-width: $mobile) {
+        width: 100%;
+
+        &--desktop {
+          display: none;
+        }
+
+        &--mobile {
+          display: flex;
+        }
+      }
+
+
     }
 
     &__bottom-logo svg {
       bottom: -1.5rem;
       right: -0.8rem;
       max-width: 106%;
+
+
+      @media (max-width: $laptop) {
+        bottom: -3rem;
+      }
+
+      @media (max-width: $mobile) {
+        bottom: -3.5rem;
+      }
+
     }
 
     &__logo-text {
@@ -25,10 +69,61 @@
       &--center {
         margin-left: 13rem;
       }
+
+      @media (max-width: $tablet) {
+        font-size: 2.5rem;
+        line-height: normal;
+
+        &--center {
+          margin-left: 0;
+        }
+      }
     }
 
     .animaicons {
       padding: 0 0 0 9rem;
+
+      @media (max-width: $tablet) {
+        display: flex;
+        padding: 0 0 0 2rem;
+        flex-grow: 0;
+
+
+        .animaicons__image {
+          width: 8rem;
+          height: 8rem;
+        }
+
+        .animaicons__column {
+          width: 8rem;
+          height: 8rem;
+        }
+
+
+      }
+
+      @media (max-width: $mobile) {
+        position: absolute;
+        bottom: 3.8rem;
+        right: 1.8rem;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 0;
+
+        .animaicons__image {
+          width: 3rem;
+          height: 3rem;
+        }
+
+        .animaicons__column {
+          width: 3rem;
+          height: 3rem;
+        }
+
+        .animaicons__column:last-child {
+          display: none;
+        }
+      }
     }
   };
 

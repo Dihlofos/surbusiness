@@ -29,15 +29,6 @@
   &__link {
     padding: 1rem 0 0;
 
-    @media (max-width: $mobile) {
-      padding: 0;
-      display: none;
-
-      img {
-        width: 107px;
-      }
-    }
-
     &--mobile {
       display: none;
 
@@ -49,6 +40,27 @@
         }
       }
     }
+
+    @media (max-width: $mobile) {
+      padding: 0;
+      display: none;
+
+      img {
+        width: 107px;
+      }
+
+      &--article {
+        display: block;
+
+        img {
+          width: 15rem;
+        }
+      }
+
+
+    }
+
+
   }
 
   &__main-link {
@@ -58,6 +70,10 @@
     text-transform: uppercase;
     color: $black;
     z-index: 4;
+
+    @media (max-width: $mobile) {
+      font-size: 1.4rem;
+    }
   }
 
   &__content {

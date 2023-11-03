@@ -3,6 +3,10 @@
   padding: 8rem 0 6rem;
   z-index: 2;
 
+  @media (max-width: $tablet) {
+    padding: 4rem 0 3rem;
+  }
+
   &__title {
     margin: 0 0 5rem;
   }
@@ -17,6 +21,17 @@
     top: -22rem;
     right: -81rem;
     z-index: 2;
+
+    @media (max-width: $laptop) {
+      right: -120rem;
+    }
+
+    @media (max-width: $tablet) {
+      right: -4rem;
+      top: auto;
+      bottom: -39rem;
+      width: 60rem;
+    }
   }
 
   &__content {
@@ -26,17 +41,32 @@
 
   &__bullit {
     position: relative;
+    flex-shrink: 0;
   }
 
   &__octopus {
     position: absolute;
     bottom: -21rem;
     right: -5rem;
+
+    @media (max-width: $laptop) {
+      right: -20rem;
+    }
+
+    @media (max-width: $tablet) {
+      right: 30rem;
+      bottom: -30rem;;
+      width: 30rem;
+    }
   }
 
   &__list {
     list-style: none;
     padding: 0;
+
+    @media (max-width: $tablet) {
+      margin: 0 0 15rem;
+    }
   }
 
   &__item {
@@ -44,11 +74,19 @@
     gap: 4.2rem;
     align-items: center;
     margin: 0 0 3.1rem;
+
+    @media (max-width: $tablet) {
+      margin: 0 0 1rem;
+    }
   }
 
   &__text {
     font-size: 2.5rem;
     line-height: normal;
+
+    @media (max-width: $tablet) {
+      font-size: 2rem;
+    }
 
     span {
       font-family: $dele;

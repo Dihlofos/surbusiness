@@ -39,6 +39,10 @@
     text-align: center;
     padding: 3.4rem 3.3rem;
     font-weight: 400;
+
+    @media (max-width: $tablet) {
+      font-size: 1.6rem;
+    }
   }
 
   &__block {
@@ -60,6 +64,11 @@
     flex-grow: 0;
     text-transform: uppercase;
     padding: 0 4rem 0 0;
+
+    @media (max-width: $tablet) {
+      font-size: 2rem;
+      width: 27rem
+    }
 
     &--small-pad {
       padding-right: 1rem;
@@ -84,6 +93,10 @@
     li {
       margin: 0 0 1rem;
     }
+
+    @media (max-width: $tablet) {
+      font-size: 2rem;
+    }
   }
 
   &__link {
@@ -95,6 +108,10 @@
     font-size: 2.5rem;
     cursor: pointer;
     border-bottom: 1px solid currentColor;
+
+    @media (max-width: $tablet) {
+      font-size: 2rem;
+    }
 
     &:hover {
       color: $pink;
