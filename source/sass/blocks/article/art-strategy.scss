@@ -7,13 +7,25 @@
     padding: 4rem 0 3rem;
   }
 
-  &__title {
+  @media (max-width: $mobile) {
+    padding: 2rem 0 5.5rem;
+  }
+
+  .section-title {
     margin: 0 0 5rem;
+
+    @media (max-width: $mobile) {
+      margin: 0 0 2rem;
+    }
   }
 
   &__description {
     max-width: 104.4rem;
     margin: 0 0 6.5rem;
+
+    @media (max-width: $mobile) {
+      margin: 0 0 6rem;
+    }
   }
 
   &__decor {
@@ -32,6 +44,14 @@
       bottom: -39rem;
       width: 60rem;
     }
+
+    @media (max-width: $mobile) {
+      right: -24rem;
+      top: auto;
+      bottom: -32rem;
+      width: 59rem;
+      transform: rotate(14deg);
+    }
   }
 
   &__content {
@@ -42,6 +62,10 @@
   &__bullit {
     position: relative;
     flex-shrink: 0;
+
+    @media (max-width: $mobile) {
+      width: 8.3rem;
+    }
   }
 
   &__octopus {
@@ -57,6 +81,12 @@
       right: 30rem;
       bottom: -30rem;;
       width: 30rem;
+    }
+
+    @media (max-width: $mobile) {
+      right: 10rem;
+      bottom: -27rem;
+      width: 27rem;
     }
   }
 
@@ -78,6 +108,11 @@
     @media (max-width: $tablet) {
       margin: 0 0 1rem;
     }
+
+    @media (max-width: $mobile) {
+      gap: 2rem;
+      margin: 0 0 1.8rem;
+    }
   }
 
   &__text {
@@ -86,6 +121,12 @@
 
     @media (max-width: $tablet) {
       font-size: 2rem;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: normal;
     }
 
     span {
@@ -100,5 +141,10 @@
 
   .article__title {
     margin: 0 0 4rem;
+
+    @media (max-width: $mobile) {
+      font-size: 1.6rem;
+      margin: 0 0 3.2rem;
+    }
   }
 }

@@ -3,6 +3,11 @@
   flex-wrap: wrap;
   margin: 0 -2rem 6rem;
 
+  @media(max-width: $mobile) {
+    flex-direction: column;
+    margin: 0;
+  }
+
   &__block {
     border: 1px solid $purple;
     padding: 2rem 1rem 1rem 2rem;
@@ -13,6 +18,11 @@
     &:nth-child(3) {
       border-top: none;
       padding-top: 1rem;
+
+      @media(max-width: $mobile) {
+        padding: 2.2rem 0 2.5rem;
+      }
+
     }
 
     &:nth-child(7),
@@ -39,12 +49,27 @@
     &:nth-child(5),
     &:nth-child(8) {
       width: 35%;
+
+      @media(max-width: $mobile) {
+        width: 100%;
+      }
     }
 
     &:nth-child(1) {
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+
+    @media(max-width: $mobile) {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid $purple;
+      padding: 2.2rem 0 2.5rem;
+
+      &:first-child {
+        display: none;
+      }
     }
   }
 
