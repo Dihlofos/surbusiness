@@ -1,18 +1,36 @@
 .art-packing {
   padding: 5.5rem 0 5rem;
 
-  &__title {
+  @media (max-width: $mobile) {
+    padding: 5.5rem 0 0.5rem;
+  }
+
+  .section-title {
     margin: 0 0 6rem;
+
+    @media (max-width: $mobile) {
+      margin: 0 0 1.5rem;
+    }
   }
 
   &__text-block {
     margin: 0 0 6.5rem;
 
+    @media (max-width: $mobile) {
+      margin: 0 0 3rem;
+    }
+
     p {
       margin: 0 0 3.5rem;
-     &:last-child {
-      margin-bottom: 0;
-     }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @media (max-width: $mobile) {
+        line-height: 1.42;
+        margin: 0 0 1rem;
+      }
     }
   }
 
@@ -24,6 +42,11 @@
     font-weight: 400;
     line-height: normal;
     margin: 0 0 3rem;
+
+    @media (max-width: $mobile) {
+      font-size: 1.6rem;
+      margin: 0 0 2rem;
+    }
   }
 
   &__images {
@@ -32,6 +55,23 @@
     justify-content: center;
     gap: 3rem;
     margin: 0 0 5rem;
+
+    img {
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      margin: 3rem 0 3rem;
+      gap: 1.6rem;
+
+      &--2 {
+        flex-direction: row;
+        margin: 0 -2rem;
+        gap: 0;
+      }
+    }
   }
 
   &__image {
@@ -39,6 +79,11 @@
     z-index: 4;
     margin-top: 3.5rem;
     margin-right: 1rem;
+
+    @media (max-width: $mobile) {
+      margin: 0;
+      border-radius: 0 !important;
+    }
   }
 
   &__decor {
@@ -48,8 +93,16 @@
     z-index: 3;
 
     @media (max-width: $laptop) {
-      right: -70rem;
-      bottom: -30rem;
+      right: -50rem;
+      bottom: -22rem;
+      max-width: initial;
+    }
+
+    @media (max-width: $mobile) {
+      right: -18rem;
+      bottom: -5rem;
+      width: 30rem;
+      max-width: initial;
     }
   }
 

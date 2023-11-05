@@ -7,6 +7,10 @@
     margin-top: -5rem;
   }
 
+  @media (max-width: $mobile) {
+    margin-top: -6rem;
+  }
+
   &__decor {
     position: absolute;
     bottom: 20rem;
@@ -23,6 +27,12 @@
       left: auto;
       bottom: auto;
     }
+
+    @media (max-width: $mobile) {
+      width: 24rem;
+      top: -0.5rem;
+      right: -18px;
+    }
   }
 
   &__text {
@@ -37,6 +47,13 @@
 
     @media (max-width: $tablet) {
       font-size: 2.5rem;
+    }
+
+    @media (max-width: $mobile) {
+      padding: 2.3rem 2rem 2.4rem 2.6rem;
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 1.45;
     }
   }
 }
