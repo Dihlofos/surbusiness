@@ -126,23 +126,25 @@
     const step1 = document.querySelector(".js-steps-item-1");
     const step2 = document.querySelector(".js-steps-item-2");
 
-    const stepsScene = new ScrollMagic.Scene({
-      triggerElement: ".steps",
-      offset: 300,
-      duration: 1,
-    }).addTo(controller);
+    if (step1 && step2) {
+      const stepsScene = new ScrollMagic.Scene({
+        triggerElement: ".steps",
+        offset: 300,
+        duration: 1,
+      }).addTo(controller);
 
-    stepsScene.on("enter", function () {
-      step1.classList.add("animate-open-1");
-      step2.classList.add("animate-open-2");
-    });
+      stepsScene.on("enter", function () {
+        step1.classList.add("animate-open-1");
+        step2.classList.add("animate-open-2");
+      });
 
-    stepsScene.on("leave", function () {
-      setTimeout(() => {
-        step1.classList.remove("animate-open-1");
-        step2.classList.remove("animate-open-2");
-      }, 1500);
-    });
+      stepsScene.on("leave", function () {
+        setTimeout(() => {
+          step1.classList.remove("animate-open-1");
+          step2.classList.remove("animate-open-2");
+        }, 1500);
+      });
+    }
   }
 
   function iniDesktopAnimations() {
@@ -620,6 +622,20 @@
           myElementHeight
     );
   }
+})();
+
+"use strict";
+(function () {
+  const swot = document.querySelector(".js-swot");
+  const button = swot.querySelector(".js-swot-more-button");
+  const vw = window.innerWidth;
+  if (!swot || vw > 767) {
+    return;
+  }
+  swot.classList.add("swot-short");
+  button.addEventListener("click", () => {
+    swot.classList.remove("swot-short");
+  });
 })();
 
 "use strict";

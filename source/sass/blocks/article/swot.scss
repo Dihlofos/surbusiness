@@ -2,6 +2,35 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0 -2rem 6rem;
+  position: relative;
+
+  &__more-button {
+    display: none;
+  }
+
+  &.swot-short {
+    @media (max-width: $mobile) {
+      max-height: 42.6rem;
+      flex-wrap: nowrap;
+      overflow: hidden;
+
+      .swot__more-button {
+        display: flex;
+        align-items: flex-end;
+        position: absolute;
+        width: 100%;
+        height: 5rem;
+        bottom: 0;
+        left: 0;
+        border: none;
+        background: $grey;
+        background: linear-gradient(180deg, rgba(232,232,232,0) 0%, rgba(232,232,232,1) 49%, rgba(232,232,232,1) 100%);
+        color: #989898;
+        font-size: 1.4rem;
+        text-align: left;
+      }
+    }
+  }
 
   @media(max-width: $mobile) {
     flex-direction: column;
