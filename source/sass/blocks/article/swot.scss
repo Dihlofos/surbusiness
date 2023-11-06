@@ -127,6 +127,10 @@
       font-size: 2rem;
     }
 
+    @media (max-width: $mobile) {
+      display: inline-flex;
+    }
+
     .purple {
       color: #876DFF;
     }
@@ -154,6 +158,20 @@
 
     @media (max-width: $tablet) {
       font-size: 2rem;
+    }
+
+    @media (max-width: $mobile) {
+      display: inline-flex;
+
+      &:before {
+        display: inline-flex;
+        margin: 0 1rem;
+        content: " — "
+      }
+    }
+
+    @media (max-width: 405px) {
+      font-size: 1.6rem;
     }
   }
 

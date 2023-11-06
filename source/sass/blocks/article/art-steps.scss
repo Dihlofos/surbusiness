@@ -19,6 +19,7 @@
     border: 2px solid $purple;
     padding: 5.5rem 5.1rem 11rem;
     background-color: $grey;
+    opacity: 0;
 
     &:not(:first-child) {
       margin-top: -5rem;

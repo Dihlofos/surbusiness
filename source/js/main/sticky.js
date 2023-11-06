@@ -1,20 +1,29 @@
 "use strict";
 (function () {
-  var sticky = document.getElementsByClassName("js-sticky")[0];
+  const sticky = document.getElementsByClassName("js-sticky")[0];
+  const footer = document.querySelector(".footer");
   const links = document.querySelectorAll(".js-nav");
-  if (!sticky || !links) return;
-  var stickyAnchor = sticky.parentNode;
-  var state = false;
+  const vw = window.innerWidth;
+  if (!sticky || !links || vw < 1025) return;
+  const stickyAnchor = sticky.parentNode;
+  let state = false;
 
   function getAnchorOffset() {
     return stickyAnchor.getBoundingClientRect().top;
   }
 
   const updateSticky = function (e) {
-    if (!state && getAnchorOffset() < 140) {
+    const ifBottom = footer.getBoundingClientRect().top < 500;
+
+    if (!state && getAnchorOffset() < 140 && !ifBottom) {
       sticky.classList.add("is-sticky");
+      sticky.classList.remove("is-bottom");
       state = true;
     } else if (state && getAnchorOffset() >= 140) {
+      sticky.classList.remove("is-sticky");
+      state = false;
+    } else if (state && ifBottom) {
+      sticky.classList.add("is-bottom");
       sticky.classList.remove("is-sticky");
       state = false;
     }
