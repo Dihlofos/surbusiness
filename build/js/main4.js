@@ -803,6 +803,9 @@
 "use strict";
 (function () {
   const swot = document.querySelector(".js-swot");
+  if (!swot) {
+    return;
+  }
   const button = swot.querySelector(".js-swot-more-button");
   const vw = window.innerWidth;
   if (!swot || vw > 767) {
