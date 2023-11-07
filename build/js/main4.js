@@ -431,125 +431,129 @@
 "use strict";
 (function () {
   // Modal open/close
-  const modal = document.querySelector('.js-modal');
-  const modalOpen = document.querySelectorAll('.js-modal-open');
-  const modalOpenStep1 = document.querySelectorAll('.js-modal-open-step-1');
-  const modalClose = document.querySelectorAll('.js-modal-close');
-  const toStepOneButton = document.querySelector('.js-step-go-1');
+  const modal = document.querySelector(".js-modal");
+  const modalOpen = document.querySelectorAll(".js-modal-open");
+  const modalOpenStep1 = document.querySelectorAll(".js-modal-open-step-1");
+  const modalClose = document.querySelectorAll(".js-modal-close");
+  const toStepOneButton = document.querySelector(".js-step-go-1");
 
   // Steps
-  const steps = document.querySelectorAll('.js-step');
+  const steps = document.querySelectorAll(".js-step");
 
   // Form
   const form = document.querySelector(".js-form");
+  const formArticle = document.querySelector(".js-form-article");
   const formSubmitButton = document.querySelector(".js-form-submit");
-  const phoneField = document.querySelector('#phone');
-  const phoneFieldError = document.querySelector('.js-phone-field-error');
+  const phoneField = document.querySelector("#phone");
+  const phoneFieldError = document.querySelector(".js-phone-field-error");
   let formInvalid = false;
 
   const disableBodyScroll = bodyScrollLock.disableBodyScroll;
   const enableBodyScroll = bodyScrollLock.enableBodyScroll;
 
-  const errorMap = ["Номер телефона неверный", "Неправильный код страны", "Номер слишком короткий", "Номер слишком длинный", "Номер телефона неверный"];
+  const errorMap = [
+    "Номер телефона неверный",
+    "Неправильный код страны",
+    "Номер слишком короткий",
+    "Номер слишком длинный",
+    "Номер телефона неверный",
+  ];
 
   const options = {
     reserveScrollBarGap: true,
   };
 
   document.documentElement.style.setProperty(
-    '--window-inner-height',
+    "--window-inner-height",
     `${window.innerHeight}px`
   );
 
   function syncHeight() {
     document.documentElement.style.setProperty(
-        '--window-inner-height',
-        `${window.innerHeight}px`
+      "--window-inner-height",
+      `${window.innerHeight}px`
     );
   }
 
-  window.addEventListener('resize', syncHeight);
+  window.addEventListener("resize", syncHeight);
 
   const iti = window.intlTelInput(phoneField, {
     initialCountry: "ru",
   });
 
-  modalOpenStep1.forEach((button)=>{
-    button.addEventListener('click', ()=> {
+  modalOpenStep1.forEach((button) => {
+    button.addEventListener("click", () => {
       showStep(1);
       openModal();
-    })
-  })
-
-
+    });
+  });
 
   // Event Listeners
-  modalOpen.forEach((openButton)=>{
-    openButton.addEventListener('click', ()=> {
+  modalOpen.forEach((openButton) => {
+    openButton.addEventListener("click", () => {
       openModal();
-    })
-  })
+    });
+  });
 
   modalClose.forEach((button) => {
-    button.addEventListener('click', () => {
+    button.addEventListener("click", () => {
       closeModal();
-    })
+    });
+  });
 
-  })
-
-  toStepOneButton.addEventListener('click', ()=> {
+  toStepOneButton.addEventListener("click", () => {
     showStep(1);
-  })
+  });
 
-   // Actions
+  // Actions
   initForm();
 
   // Functions
 
   function openModal() {
-    modal.style.display = 'flex'
-      setTimeout(()=>{
-        modal.classList.add('is-open');
+    modal.style.display = "flex";
+    setTimeout(() => {
+      modal.classList.add("is-open");
 
-        // disableBodyScroll(modal, options);
-        // document.querySelector('html').classList.add('is-locked');
-      },0)
+      // disableBodyScroll(modal, options);
+      // document.querySelector('html').classList.add('is-locked');
+    }, 0);
   }
 
   function closeModal() {
-    modal.classList.remove('is-open');
-      setTimeout(()=>{
-        modal.style.display = 'none'
-        clearSteps();
-        // enableBodyScroll(modal);
+    modal.classList.remove("is-open");
+    setTimeout(() => {
+      modal.style.display = "none";
+      clearSteps();
+      // enableBodyScroll(modal);
 
-        // document.querySelector('html').classList.remove('is-locked');
-      },200)
+      // document.querySelector('html').classList.remove('is-locked');
+    }, 200);
   }
   function clearSteps() {
-    steps.forEach((step,index)=> {
+    steps.forEach((step, index) => {
       if (index === 0) {
-        step.classList.remove('visually-hidden')
+        step.classList.remove("visually-hidden");
       } else {
-        step.classList.add('visually-hidden')
+        step.classList.add("visually-hidden");
       }
-    })
+    });
   }
 
   function showStep(stepIndex) {
-    steps.forEach((step,index)=> {
+    steps.forEach((step, index) => {
       if (index === stepIndex) {
-        step.classList.remove('visually-hidden')
+        step.classList.remove("visually-hidden");
       } else {
-        step.classList.add('visually-hidden')
+        step.classList.add("visually-hidden");
       }
-    })
+    });
   }
 
   function initForm() {
     if (!form) return;
 
-    phoneField.addEventListener('blur', function() {
+    phoneField.addEventListener("blur", function () {
       phoneFieldValidate();
     });
 
@@ -557,7 +561,7 @@
       e.preventDefault();
 
       if (formInvalid) return;
-      formSubmitButton.classList.add('disabled');
+      formSubmitButton.classList.add("disabled");
       grecaptcha.ready(function () {
         grecaptcha
           .execute("6LczUdEaAAAAACImrHbKWiSSutDmsNCH1sC9zXbu", {
@@ -575,19 +579,23 @@
           })
           .catch((error) => {
             showStep(3);
-          })
+          });
       });
     });
   }
 
   function sendEmail({ name, email, phone, message }) {
+    const additionalText = formArticle
+      ? "Хочу получить бесплатную бета-версию стратегии продвижения для вашего бизнеса"
+      : "";
     formSubmitButton.setAttribute("disabled", true);
     Email.send({
-      SecureToken : "b03e26ab-3244-4815-bd29-bd9edccd5aea",
-      To : 'business@suragency.ru',
-      From : "business@suragency.ru",
+      SecureToken: "b03e26ab-3244-4815-bd29-bd9edccd5aea",
+      To: "business@suragency.ru",
+      From: "business@suragency.ru",
       Subject: `${name} отправил вам сообщение`,
       Body: `
+        ${additionalText.length ? `<p>${additionalText}</p>` : ""}
         <p><h4>Здравствуйте, меня зовут: ${name}</h4></p>
         <p><strong>Сообщение:</strong> ${message}</p>
         <p><strong>Адрес электронной почты:</strong> ${email}</p>
@@ -600,30 +608,28 @@
       .catch((error) => {
         showStep(3);
       })
-      .finally(()=>{
-        formSubmitButton.classList.remove('disabled');
+      .finally(() => {
+        formSubmitButton.classList.remove("disabled");
         form.reset();
-      })
+      });
   }
 
   function phoneFieldValidate() {
     if (phoneField.value.trim()) {
       if (iti.isValidNumber()) {
         phoneField.classList.remove("error");
-        phoneFieldError.textContent = '';
+        phoneFieldError.textContent = "";
         formInvalid = false;
       } else {
         phoneField.classList.add("error");
         var errorCode = iti.getValidationError();
-        const errorMessage = errorMap[errorCode] ?? 'Введите корректный номер телефона'
+        const errorMessage =
+          errorMap[errorCode] ?? "Введите корректный номер телефона";
         phoneFieldError.textContent = errorMessage;
         formInvalid = true;
       }
     }
   }
-
-
-
 })();
 
 "use strict";
