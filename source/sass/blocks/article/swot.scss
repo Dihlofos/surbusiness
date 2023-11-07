@@ -149,6 +149,8 @@
   }
 
   &__title {
+    display: flex;
+    gap: 0.5rem;
     font-family: $dele;
     text-transform: uppercase;
     font-size: 2.5rem;

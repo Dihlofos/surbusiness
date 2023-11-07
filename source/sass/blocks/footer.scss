@@ -5,6 +5,21 @@
     padding: 25px 0 25px;
   }
 
+  &__top {
+    font-size: 4.5rem;
+    line-height: 6.5rem;
+    font-family: $dele;
+    text-transform: uppercase;
+    margin: 0 0 4rem;
+    max-width: 130rem;
+
+    @media (max-width: $mobile) {
+      font-size: 20px;
+        line-height: 29px;
+        margin: 0 0 20px;
+    }
+  }
+
   &__header {
     position: relative;
     display: flex;
