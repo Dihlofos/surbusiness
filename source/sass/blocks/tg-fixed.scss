@@ -1,0 +1,15 @@
+.tg-fixed {
+  position: fixed;
+  bottom: 8rem;
+  right: 3.5rem;
+  z-index: 5;
+
+  @media (max-width: $mobile) {
+    bottom: 50px;
+    right: 15px;
+
+    &:hover {
+      color: $purple;
+    }
+  }
+}
