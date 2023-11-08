@@ -4,6 +4,19 @@
   background-color: $grey;
   z-index: 30;
 
+  &__tg-link {
+    position: relative;
+    z-index: 5;
+
+    @media (max-width: $mobile) {
+      svg {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+
+    }
+  }
+
   &__top {
     position: relative;
     display: flex;
@@ -86,6 +99,7 @@
 
     @media (max-width: $mobile) {
       justify-content: flex-end;
+      padding-right: 4rem;
     }
   }
 
