@@ -54,7 +54,7 @@
       }
     }
 
-    @media (max-width: $mobile) {
+    @media (max-width: $tablet) {
       padding: 0;
       display: none;
 
@@ -74,6 +74,33 @@
     }
 
 
+  }
+
+  &__article-link {
+    display: block;
+    position: absolute;
+    bottom: 1.4rem;
+    left: 10rem;
+    width: 26rem;
+    z-index: 5;
+
+    &--mobile {
+      display: none;
+    }
+
+    @media (max-width: $tablet) {
+
+      display: none;
+
+      &--mobile {
+        display: block;
+        position: static;
+        width: 100%;
+        font-size: 14px;
+        line-height: 11px;
+
+      }
+    }
   }
 
   &__main-link {
