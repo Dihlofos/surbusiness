@@ -178,6 +178,7 @@
     })
       .then((message) => {
         //showStep(2);
+        fbq("track", "Lead");
         window.location.href = "/spasibo.html";
       })
       .catch((error) => {
