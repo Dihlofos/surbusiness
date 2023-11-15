@@ -1,27 +1,22 @@
 "use strict";
 (function () {
+  const container = document.querySelector(".js-animaicons");
+  if (!container) return;
+  const columns = container.querySelectorAll(".js-animaicons-column");
 
-  const container = document.querySelector('.js-animaicons');
-  const columns = container.querySelectorAll('.js-animaicons-column');
-
-  columns.forEach((column)=>{
-    setInterval(()=>{
+  columns.forEach((column) => {
+    setInterval(() => {
       changeVisibility(column);
     }, 1200);
-  })
-
-
+  });
 
   function changeVisibility(column) {
-    const shown = column.querySelector('.is-shown');
-    shown.classList.remove('is-shown');
+    const shown = column.querySelector(".is-shown");
+    shown.classList.remove("is-shown");
     if (shown.nextSibling !== null) {
-      shown.nextSibling.classList.add('is-shown');
+      shown.nextSibling.classList.add("is-shown");
     } else {
-      column.children[0].classList.add('is-shown');
-
+      column.children[0].classList.add("is-shown");
     }
   }
-
-
 })();

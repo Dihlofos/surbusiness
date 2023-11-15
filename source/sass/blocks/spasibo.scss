@@ -1,0 +1,16 @@
+.spasibo {
+  display: flex;
+  padding-top: 15rem;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100%;
+
+  .modal__finish-text {
+      font-size: 4.5rem;
+      line-height: 6.5rem;
+    @media (max-width: $mobile) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+}

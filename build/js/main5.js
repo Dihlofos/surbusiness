@@ -1,29 +1,24 @@
 "use strict";
 (function () {
+  const container = document.querySelector(".js-animaicons");
+  if (!container) return;
+  const columns = container.querySelectorAll(".js-animaicons-column");
 
-  const container = document.querySelector('.js-animaicons');
-  const columns = container.querySelectorAll('.js-animaicons-column');
-
-  columns.forEach((column)=>{
-    setInterval(()=>{
+  columns.forEach((column) => {
+    setInterval(() => {
       changeVisibility(column);
     }, 1200);
-  })
-
-
+  });
 
   function changeVisibility(column) {
-    const shown = column.querySelector('.is-shown');
-    shown.classList.remove('is-shown');
+    const shown = column.querySelector(".is-shown");
+    shown.classList.remove("is-shown");
     if (shown.nextSibling !== null) {
-      shown.nextSibling.classList.add('is-shown');
+      shown.nextSibling.classList.add("is-shown");
     } else {
-      column.children[0].classList.add('is-shown');
-
+      column.children[0].classList.add("is-shown");
     }
   }
-
-
 })();
 
 "use strict";
@@ -432,6 +427,7 @@
 (function () {
   // Modal open/close
   const modal = document.querySelector(".js-modal");
+  if (!modal) return;
   const modalOpen = document.querySelectorAll(".js-modal-open");
   const modalOpenStep1 = document.querySelectorAll(".js-modal-open-step-1");
   const modalClose = document.querySelectorAll(".js-modal-close");
@@ -560,6 +556,8 @@
     form.addEventListener("submit", (e) => {
       e.preventDefault();
 
+      console.log("here?", formInvalid);
+
       if (formInvalid) return;
       formSubmitButton.classList.add("disabled");
       grecaptcha.ready(function () {
@@ -575,6 +573,7 @@
               res[key] = value;
             }
             console.log("all correct, but not do anything further", res);
+
             sendEmail(res);
           })
           .catch((error) => {
@@ -603,7 +602,8 @@
       `,
     })
       .then((message) => {
-        showStep(2);
+        //showStep(2);
+        window.location.href = "/spasibo.html";
       })
       .catch((error) => {
         showStep(3);

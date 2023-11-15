@@ -2,6 +2,7 @@
 (function () {
   // Modal open/close
   const modal = document.querySelector(".js-modal");
+  if (!modal) return;
   const modalOpen = document.querySelectorAll(".js-modal-open");
   const modalOpenStep1 = document.querySelectorAll(".js-modal-open-step-1");
   const modalClose = document.querySelectorAll(".js-modal-close");
@@ -130,6 +131,8 @@
     form.addEventListener("submit", (e) => {
       e.preventDefault();
 
+      console.log("here?", formInvalid);
+
       if (formInvalid) return;
       formSubmitButton.classList.add("disabled");
       grecaptcha.ready(function () {
@@ -145,6 +148,7 @@
               res[key] = value;
             }
             console.log("all correct, but not do anything further", res);
+
             sendEmail(res);
           })
           .catch((error) => {
@@ -173,7 +177,8 @@
       `,
     })
       .then((message) => {
-        showStep(2);
+        //showStep(2);
+        window.location.href = "/spasibo.html";
       })
       .catch((error) => {
         showStep(3);
